@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -euo pipefail
 trap 'echo "❌ Failed at line $LINENO"' ERR
 
 DRY_RUN=false
