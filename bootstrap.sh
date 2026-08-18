@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -euxo pipefail
+trap 'echo "❌ Failed at line $LINENO"' ERR
 
 DRY_RUN=false
 RECIPE_FILE="recipes/packages.json"
