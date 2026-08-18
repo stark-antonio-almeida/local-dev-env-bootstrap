@@ -224,8 +224,11 @@
   },
   "yazi": {
     "ubuntu": {
-      "manager": "apt",
-      "package": "yazi",
+      "manager": "cargo",
+      "package": "yazi-fm",
+      "flags": [
+        "--locked"
+      ],
       "validation": [
         "yazi --version"
       ]
@@ -352,26 +355,6 @@
       "package": "stow",
       "validation": [
         "stow --version"
-      ]
-    }
-  },
-  "ssh": {
-    "ubuntu": {
-      "manager": "script",
-      "script": "ssh.sh",
-      "validation": [
-        "test -f ~/.ssh/config",
-        "test -f ~/.ssh/id_ed25519",
-        "test -f ~/.ssh/id_ed25519.pub"
-      ]
-    }
-  },
-  "stow-config": {
-    "ubuntu": {
-      "manager": "script",
-      "script": "stow.sh",
-      "validation": [
-        "test -L ~/.config/nvim"
       ]
     }
   }

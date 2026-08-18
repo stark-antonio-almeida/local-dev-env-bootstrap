@@ -10,17 +10,6 @@ if [[ "${1:-}" == "--dry-run" ]]; then
   DRY_RUN=true
 fi
 
-run_command() {
-  local command="$1"
-
-  echo "    do: $command"
-  if $DRY_RUN; then
-    echo "skip"
-  else
-    eval "$command"
-  fi
-}
-
 ensure_command() {
   local command="$1"
   local package="$2"
@@ -38,6 +27,17 @@ ensure_command() {
 }
 
 ensure_command jq jq
+
+run_command() {
+  local command="$1"
+
+  echo "    do: $command"
+  if $DRY_RUN; then
+    echo "skip"
+  else
+    eval "$command"
+  fi
+}
 
 run_commands() {
   local label="$1"
@@ -72,48 +72,80 @@ while read -r entry; do
 
   echo "    pantry: $manager"
 
-  run_commands "prep" "$(jq -c '.pre // null' <<<"$recipe")"
+  skip_install=false
+  package=""
+  source "scripts/$manager.sh"
 
   if jq -e '.package' <<<"$recipe" >/dev/null; then
 
     package=$(jq -r '.package' <<<"$recipe")
-
     flags=$(jq -r '.flags[]?' <<<"$recipe")
 
-    echo "    simmer: $package $flags"
-    if $DRY_RUN; then
-      echo "skip"
-    else
-      source "scripts/$manager.sh"
+    if is_installed "$package"; then
 
-      install "$package" $flags
+      echo "    stocked: $package"
+      skip_install=true
+
     fi
   fi
 
-  if jq -e '.install' <<<"$recipe" >/dev/null; then
+  if ! $skip_install; then
+    # Run pre
+    run_commands "prep" "$(jq -c '.pre // null' <<<"$recipe")"
 
-    run_commands "cook" "$(jq -c '.install' <<<"$recipe")"
+    if jq -e '.package' <<<"$recipe" >/dev/null; then
 
-  fi
+      package=$(jq -r '.package' <<<"$recipe")
 
-  run_commands "season" "$(jq -c '.post // null' <<<"$recipe")"
+      flags=$(jq -r '.flags[]?' <<<"$recipe")
 
-  validations=$(jq -c '.validation // null' <<<"$recipe")
-
-  if [[ "$validations" != "null" ]]; then
-
-    while read -r command; do
-
-      echo "    taste: $command"
-
+      echo "    simmer: $package $flags"
       if $DRY_RUN; then
         echo "skip"
       else
-        run_command "$command"
+        source "scripts/$manager.sh"
+
+        installed=false
+
+        if jq -e '.package' <<<"$recipe" >/dev/null; then
+
+          package=$(jq -r '.package' <<<"$recipe")
+
+          if is_installed "$package"; then
+            installed=true
+          fi
+        fi
+        install "$package" $flags
       fi
+    fi
 
-    done < <(jq -r '.[]' <<<"$validations")
+    if jq -e '.install' <<<"$recipe" >/dev/null; then
 
+      run_commands "cook" "$(jq -c '.install' <<<"$recipe")"
+
+    fi
+
+    # Run post
+    run_commands "season" "$(jq -c '.post // null' <<<"$recipe")"
+
+    # Run validations
+    validations=$(jq -c '.validation // null' <<<"$recipe")
+
+    if [[ "$validations" != "null" ]]; then
+
+      while read -r command; do
+
+        echo "    taste: $command"
+
+        if $DRY_RUN; then
+          echo "skip"
+        else
+          run_command "$command"
+        fi
+
+      done < <(jq -r '.[]' <<<"$validations")
+
+    fi
   fi
 
   echo
