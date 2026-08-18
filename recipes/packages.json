@@ -52,8 +52,8 @@
         ". \"$HOME/.cargo/env\""
       ],
       "pre" : [
-        "grep -q '~/cargo/bin' ~/.profile || echo 'export PATH=\"~/.cargo/bin:$PATH\"' >> ~/.profile",
-        "export PATH=\"~/.cargo/bin:$PATH\""
+        "grep -q \"$HOME/cargo/bin\" ~/.profile || echo 'export PATH=\"$HOME/cargo/bin:$PATH\"' >> ~/.profile",
+        "export PATH=\"$HOME/.cargo/bin:$PATH\""
       ],
       "validation": [
         "rustc --version",
