@@ -34,11 +34,12 @@
   },
   "dotnet": {
     "ubuntu": {
-      "manager": "snap",
-      "package": "dotnet-sdk-100",
-      "flags": [
-        "--classic"
+      "manager": "apt",
+      "pre": [
+        "sudo add-apt-repository ppa:dotnet/backports -y",
+        "sudo apt update"
       ],
+      "package": "dotnet-sdk-10.0",
       "validation": [
         "dotnet --info"
       ]
