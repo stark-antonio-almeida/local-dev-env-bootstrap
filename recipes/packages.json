@@ -44,6 +44,24 @@
       ]
     }
   },
+  "clang": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "clang",
+      "validation": [
+        "clang --version"
+      ]
+    }
+  },
+  "libclang": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "libclang-dev",
+      "validation": [
+        "find /usr -name libclang.so 2>/dev/null | grep libclang"
+      ]
+    }
+  },
   "rust": {
     "ubuntu": {
       "manager": "custom",
