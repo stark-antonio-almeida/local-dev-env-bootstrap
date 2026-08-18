@@ -1,0 +1,325 @@
+{
+  "git": {
+    "ubuntu": {
+      "manager": "apt",
+      "pre": [
+        "sudo add-apt-repository ppa:git-core/ppa -y",
+        "sudo apt update"
+      ],
+      "post": [
+        "git config --global core.eol lf",
+        "git config --global core.autocrlf false"
+      ],
+      "package": "git",
+      "validation": [
+        "git --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "Git.Git",
+      "validation": [
+        "git --version"
+      ]
+    }
+  },
+  "cargo": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "cargo",
+      "validation": [
+        "cargo --version"
+      ]
+    }
+  },
+  "dotnet": {
+    "ubuntu": {
+      "manager": "snap",
+      "package": "dotnet-sdk-100",
+      "flags": [
+        "--classic"
+      ],
+      "validation": [
+        "dotnet --info"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "Microsoft.DotNet.SDK.8",
+      "validation": [
+        "dotnet --info"
+      ]
+    }
+  },
+  "neovim": {
+    "ubuntu": {
+      "manager": "snap",
+      "package": "nvim",
+      "flags": [
+        "--classic"
+      ],
+      "validation": [
+        "nvim --version"
+      ]
+    }
+  },
+  "nushell": {
+    "ubuntu": {
+      "manager": "snap",
+      "package": "nushell",
+      "flags": [
+        "--classic"
+      ],
+      "validation": [
+        "nu --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "Nushell.Nushell",
+      "validation": [
+        "nu --version"
+      ]
+    }
+  },
+  "ghostty": {
+    "ubuntu": {
+      "manager": "snap",
+      "package": "ghostty",
+      "flags": [
+        "--classic"
+      ],
+      "validation": [
+        "ghostty --version"
+      ]
+    }
+  },
+  "ripgrep": {
+    "ubuntu": {
+      "manager": "cargo",
+      "package": "ripgrep",
+      "validation": [
+        "rg --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "BurntSushi.ripgrep.MSVC",
+      "validation": [
+        "rg --version"
+      ]
+    }
+  },
+  "tree-sitter-cli": {
+    "ubuntu": {
+      "manager": "cargo",
+      "package": "tree-sitter-cli",
+      "validation": [
+        "tree-sitter --version"
+      ]
+    }
+  },
+  "fzf": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "fzf",
+      "validation": [
+        "fzf --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "junegunn.fzf",
+      "validation": [
+        "fzf --version"
+      ]
+    }
+  },
+  "bat": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "bat",
+      "validation": [
+        "bat --version"
+      ]
+    }
+  },
+  "eza": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "eza",
+      "validation": [
+        "eza --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "eza-community.eza",
+      "validation": [
+        "eza --version"
+      ]
+    }
+  },
+  "lazygit": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "lazygit",
+      "validation": [
+        "lazygit --version"
+      ]
+    }
+  },
+  "yazi": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "yazi",
+      "validation": [
+        "yazi --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "sxyazi.yazi",
+      "validation": [
+        "yazi --version"
+      ]
+    }
+  },
+  "fd": {
+    "windows11": {
+      "manager": "winget",
+      "package": "sharkdp.fd",
+      "validation": [
+        "fd --version"
+      ]
+    }
+  },
+  "jq": {
+    "windows11": {
+      "manager": "winget",
+      "package": "jqlang.jq",
+      "validation": [
+        "jq --version"
+      ]
+    }
+  },
+  "yq": {
+    "windows11": {
+      "manager": "winget",
+      "package": "MikeFarah.yq",
+      "validation": [
+        "yq --version"
+      ]
+    }
+  },
+  "zoxide": {
+    "windows11": {
+      "manager": "winget",
+      "package": "ajeetdsouza.zoxide",
+      "validation": [
+        "zoxide --version"
+      ]
+    }
+  },
+  "delta": {
+    "windows11": {
+      "manager": "winget",
+      "package": "dandavison.delta",
+      "validation": [
+        "delta --version"
+      ]
+    }
+  },
+  "glow": {
+    "windows11": {
+      "manager": "winget",
+      "package": "charmbracelet.glow",
+      "validation": [
+        "glow --version"
+      ]
+    }
+  },
+  "starship": {
+    "windows11": {
+      "manager": "winget",
+      "package": "Starship.Starship",
+      "validation": [
+        "starship --version"
+      ]
+    },
+    "ubuntu": {
+      "manager": "custom",
+      "install": [
+        "curl -sS https://starship.rs/install.sh | sh -s -- -y"
+      ],
+      "validation": [
+        "starship --version"
+      ]
+    }
+  },
+  "go": {
+    "windows11": {
+      "manager": "winget",
+      "package": "GoLang.Go",
+      "validation": [
+        "go version"
+      ]
+    }
+  },
+  "python": {
+    "windows11": {
+      "manager": "winget",
+      "package": "Python.Python.3.13",
+      "validation": [
+        "python --version"
+      ]
+    }
+  },
+  "gh": {
+    "windows11": {
+      "manager": "winget",
+      "package": "GitHub.cli",
+      "validation": [
+        "gh --version"
+      ]
+    }
+  },
+  "wsl": {
+    "windows11": {
+      "manager": "winget",
+      "package": "Microsoft.WSL",
+      "validation": [
+        "wsl --version"
+      ]
+    }
+  },
+  "stow": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "stow",
+      "validation": [
+        "stow --version"
+      ]
+    }
+  },
+  "ssh": {
+    "ubuntu": {
+      "manager": "script",
+      "script": "ssh.sh",
+      "validation": [
+        "test -f ~/.ssh/config",
+        "test -f ~/.ssh/id_ed25519",
+        "test -f ~/.ssh/id_ed25519.pub"
+      ]
+    }
+  },
+  "stow-config": {
+    "ubuntu": {
+      "manager": "script",
+      "script": "stow.sh",
+      "validation": [
+        "test -L ~/.config/nvim"
+      ]
+    }
+  }
+}
