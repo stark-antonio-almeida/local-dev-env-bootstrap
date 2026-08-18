@@ -204,7 +204,18 @@
   "lazygit": {
     "ubuntu": {
       "manager": "apt",
+      "pre": [
+        "LAZYGIT_PPA='ppa:lazygit-team/release' sudo -E add-apt-repository -y ppa:lazygit-team/release",
+        "sudo apt update"
+      ],
       "package": "lazygit",
+      "validation": [
+        "lazygit --version"
+      ]
+    },
+    "windows11": {
+      "manager": "winget",
+      "package": "JesseDuffield.lazygit",
       "validation": [
         "lazygit --version"
       ]
