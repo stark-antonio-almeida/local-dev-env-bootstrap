@@ -5,6 +5,9 @@ trap 'echo "❌ Failed at line $LINENO"' ERR
 
 DRY_RUN=false
 RECIPE_FILE="recipes/packages.json"
+installed_packages=()
+skip_packages=()
+dry_run_packages=()
 
 if [[ "${1:-}" == "--dry-run" ]]; then
   DRY_RUN=true
@@ -76,17 +79,21 @@ while read -r entry; do
   package=""
   source "scripts/$manager.sh"
 
-  if jq -e '.package' <<<"$recipe" >/dev/null; then
+  # Run validations to check if it is installed
+  validations=$(jq -c '.validation // null' <<<"$recipe")
 
-    package=$(jq -r '.package' <<<"$recipe")
-    flags=$(jq -r '.flags[]?' <<<"$recipe")
+  if [[ "$validations" != "null" ]]; then
 
-    if is_installed "$package"; then
+    while read -r command; do
 
-      echo "    stocked: $package"
-      skip_install=true
+      if run_command "$command"; then
+        echo "    stocked: $name"
+        skip_packages+=("$name")
+        skip_install=true
+      fi
 
-    fi
+    done < <(jq -r '.[]' <<<"$validations")
+
   fi
 
   if ! $skip_install; then
@@ -105,16 +112,6 @@ while read -r entry; do
       else
         source "scripts/$manager.sh"
 
-        installed=false
-
-        if jq -e '.package' <<<"$recipe" >/dev/null; then
-
-          package=$(jq -r '.package' <<<"$recipe")
-
-          if is_installed "$package"; then
-            installed=true
-          fi
-        fi
         install "$package" $flags
       fi
     fi
@@ -139,8 +136,10 @@ while read -r entry; do
 
         if $DRY_RUN; then
           echo "skip"
+          dry_run_packages+=("$name")
         else
           run_command "$command"
+          installed_packages+=("$name")
         fi
 
       done < <(jq -r '.[]' <<<"$validations")
@@ -151,3 +150,7 @@ while read -r entry; do
   echo
 
 done < <(jq -c 'to_entries[]' "$RECIPE_FILE")
+
+echo "Skip : ${skip_packages[*]}"
+echo "Dry Run : ${dry_run_packages[*]}"
+echo "Installed : ${installed_packages[*]}"
