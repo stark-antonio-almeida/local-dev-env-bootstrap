@@ -185,15 +185,6 @@
       ]
     }
   },
-  "bat": {
-    "ubuntu": {
-      "manager": "apt",
-      "package": "bacula-console-qt",
-      "validation": [
-        "bat --version"
-      ]
-    }
-  },
   "eza": {
     "ubuntu": {
       "manager": "apt",
