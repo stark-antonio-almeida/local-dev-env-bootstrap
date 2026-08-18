@@ -20,25 +20,44 @@ run_command() {
   fi
 }
 
+ensure_command() {
+  local command="$1"
+  local package="$2"
+
+  if command -v "$command" >/dev/null 2>&1; then
+    return
+  fi
+
+  echo "Kitchen: stocking $package"
+
+  if ! $DRY_RUN; then
+    sudo apt update
+    sudo apt install -y "$package"
+  fi
+}
+
+ensure_command jq jq
+
 run_commands() {
   local label="$1"
   local json="$2"
 
   [[ "$json" == "null" ]] && return 0
 
-  jq -r '.[]' <<<"$json" | while read -r command; do
+  while read -r command; do
 
     echo "    $label: $command"
+
     if $DRY_RUN; then
       echo "skip"
     else
       run_command "$command"
     fi
 
-  done
+  done < <(jq -r '.[]' <<<"$json")
 }
 
-jq -c 'to_entries[]' "$RECIPE_FILE" | while read -r entry; do
+while read -r entry; do
 
   name=$(jq -r '.key' <<<"$entry")
 
@@ -82,19 +101,20 @@ jq -c 'to_entries[]' "$RECIPE_FILE" | while read -r entry; do
 
   if [[ "$validations" != "null" ]]; then
 
-    jq -r '.[]' <<<"$validations" | while read -r command; do
+    while read -r command; do
 
       echo "    taste: $command"
+
       if $DRY_RUN; then
         echo "skip"
       else
         run_command "$command"
       fi
 
-    done
+    done < <(jq -r '.[]' <<<"$validations")
 
   fi
 
   echo
 
-done
+done < <(jq -c 'to_entries[]' "$RECIPE_FILE")
