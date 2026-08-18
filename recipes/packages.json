@@ -188,7 +188,7 @@
   "bat": {
     "ubuntu": {
       "manager": "apt",
-      "package": "bat",
+      "package": "bacula-console-qt",
       "validation": [
         "bat --version"
       ]
