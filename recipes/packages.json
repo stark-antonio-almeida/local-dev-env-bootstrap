@@ -35,6 +35,15 @@
       ]
     }
   },
+  "build-essential": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "build-essential",
+      "validation": [
+        "cc --version"
+      ]
+    }
+  },
   "rust": {
     "ubuntu": {
       "manager": "custom",
