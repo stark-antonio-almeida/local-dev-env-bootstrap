@@ -222,6 +222,18 @@
       ]
     }
   },
+  "yazi-build": {
+    "ubuntu": {
+      "manager": "cargo",
+      "package": "yazi-build",
+      "flags": [
+        "--force"
+      ],
+      "validation": [
+        "cargo install --list | grep yazi-build"
+      ]
+    }
+  },
   "yazi": {
     "ubuntu": {
       "manager": "cargo",
