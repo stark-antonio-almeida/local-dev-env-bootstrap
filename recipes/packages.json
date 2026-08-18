@@ -357,5 +357,14 @@
         "stow --version"
       ]
     }
+  },
+  "btop": {
+    "ubuntu": {
+      "manager": "apt",
+      "package": "btop",
+      "validation": [
+        "btop --version"
+      ]
+    }
   }
 }
