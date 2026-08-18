@@ -51,6 +51,10 @@
         "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
         ". \"$HOME/.cargo/env\""
       ],
+      "pre" : [
+        "grep -q '~/cargo/bin' ~/.profile || echo 'export PATH=\"~/.cargo/bin:$PATH\"' >> ~/.profile",
+        "export PATH=\"~/.cargo/bin:$PATH\""
+      ]
       "validation": [
         "rustc --version",
         "cargo --version"
