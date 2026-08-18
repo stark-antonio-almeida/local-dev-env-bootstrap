@@ -3,7 +3,7 @@
     "ubuntu": {
       "manager": "custom",
       "install": [
-        "sudo if ! grep -q '/snap/bin' ~/.profile; then echo 'export PATH=\"/snap/bin:$PATH\"' >> ~/.profile; fi",
+        "grep -q '/snap/bin' ~/.profile || echo 'export PATH=\"/snap/bin:$PATH\"' >> ~/.profile",
         "export PATH=\"/snap/bin:$PATH\""
       ],
       "validation": [
