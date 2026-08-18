@@ -222,24 +222,12 @@
       ]
     }
   },
-  "yazi-build": {
-    "ubuntu": {
-      "manager": "cargo",
-      "package": "yazi-build",
-      "flags": [
-        "--force"
-      ],
-      "validation": [
-        "cargo install --list | grep yazi-build"
-      ]
-    }
-  },
   "yazi": {
     "ubuntu": {
-      "manager": "cargo",
-      "package": "yazi-fm",
-      "flags": [
-        "--locked"
+      "manager": "custom",
+      "install": [
+        "cargo install --force --git https://github.com/sxyazi/yazi.git yazi-build",
+        "cargo install --git https://github.com/sxyazi/yazi.git yazi-fm"
       ],
       "validation": [
         "yazi --version"
