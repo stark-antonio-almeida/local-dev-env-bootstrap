@@ -1,4 +1,16 @@
 {
+  "snap-bootstrap": {
+    "ubuntu": {
+      "manager": "custom",
+      "install": [
+        "if ! grep -q '/snap/bin' ~/.profile; then echo 'export PATH=\"/snap/bin:$PATH\"' >> ~/.profile; fi",
+        "export PATH=\"/snap/bin:$PATH\""
+      ],
+      "validation": [
+        "echo $PATH | grep /snap/bin"
+      ]
+    }
+  },
   "git": {
     "ubuntu": {
       "manager": "apt",
