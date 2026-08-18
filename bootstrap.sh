@@ -12,8 +12,9 @@ fi
 run_command() {
   local command="$1"
 
+  echo "    do: $command"
   if $DRY_RUN; then
-    echo "    do: $command"
+    echo "skip"
   else
     eval "$command"
   fi
@@ -27,8 +28,9 @@ run_commands() {
 
   jq -r '.[]' <<<"$json" | while read -r command; do
 
+    echo "    $label: $command"
     if $DRY_RUN; then
-      echo "    $label: $command"
+      echo "skip"
     else
       run_command "$command"
     fi
@@ -58,8 +60,9 @@ jq -c 'to_entries[]' "$RECIPE_FILE" | while read -r entry; do
 
     flags=$(jq -r '.flags[]?' <<<"$recipe")
 
+    echo "    simmer: $package $flags"
     if $DRY_RUN; then
-      echo "    simmer: $package $flags"
+      echo "skip"
     else
       source "scripts/$manager.sh"
 
@@ -81,8 +84,9 @@ jq -c 'to_entries[]' "$RECIPE_FILE" | while read -r entry; do
 
     jq -r '.[]' <<<"$validations" | while read -r command; do
 
+      echo "    taste: $command"
       if $DRY_RUN; then
-        echo "    taste: $command"
+        echo "skip"
       else
         run_command "$command"
       fi

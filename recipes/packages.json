@@ -35,11 +35,15 @@
       ]
     }
   },
-  "cargo": {
+  "rust": {
     "ubuntu": {
-      "manager": "apt",
-      "package": "cargo",
+      "manager": "custom",
+      "install": [
+        "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
+        ". \"$HOME/.cargo/env\""
+      ],
       "validation": [
+        "rustc --version",
         "cargo --version"
       ]
     }
