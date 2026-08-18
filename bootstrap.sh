@@ -84,15 +84,22 @@ while read -r entry; do
 
   if [[ "$validations" != "null" ]]; then
 
+    validation_passed=true
+
     while read -r command; do
 
-      if run_command "$command"; then
-        echo "    stocked: $name"
-        skip_packages+=("$name")
-        skip_install=true
+      if ! eval "$command" >/dev/null 2>&1; then
+        validation_passed=false
+        break
       fi
 
     done < <(jq -r '.[]' <<<"$validations")
+
+    if $validation_passed; then
+      echo "    stocked: $name"
+      skip_packages+=("$name")
+      skip_install=true
+    fi
 
   fi
 
@@ -126,9 +133,9 @@ while read -r entry; do
     run_commands "season" "$(jq -c '.post // null' <<<"$recipe")"
 
     # Run validations
-    validations=$(jq -c '.validation // null' <<<"$recipe")
-
     if [[ "$validations" != "null" ]]; then
+
+      validation_passed=true
 
       while read -r command; do
 
@@ -136,14 +143,19 @@ while read -r entry; do
 
         if $DRY_RUN; then
           echo "skip"
-          dry_run_packages+=("$name")
         else
-          run_command "$command"
-          installed_packages+=("$name")
+          if ! run_command "$command"; then
+            validation_passed=false
+          fi
         fi
 
       done < <(jq -r '.[]' <<<"$validations")
 
+      if $DRY_RUN; then
+        dry_run_packages+=("$name")
+      elif $validation_passed; then
+        installed_packages+=("$name")
+      fi
     fi
   fi
 
