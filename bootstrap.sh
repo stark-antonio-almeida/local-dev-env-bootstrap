@@ -131,14 +131,14 @@ run_validation_command() {
   local status=0
 
   if $DRY_RUN && [[ "$phase" == "taste" ]]; then
-    log "[taste]: $command"
+    log "[taste  ]: $command"
     log "      -> skip (dry-run)"
     record_event "$package" "$phase" "validation" "dry-run" "$command" ""
     return 0
   fi
 
   if ! $DRY_RUN && [[ "$phase" == "taste" ]]; then
-    log "[taste]: $command"
+    log "[taste  ]: $command"
   fi
 
   if $DRY_RUN && [[ "$phase" == "taste" ]]; then
@@ -184,7 +184,7 @@ run_install_command() {
     command_text="$command_text ${flags[*]}"
   fi
 
-  log "[simmer]: $command_text"
+  log "[simmer ]: $command_text"
 
   if $DRY_RUN; then
     log "      -> skip (dry-run)"
@@ -335,11 +335,11 @@ while read -r entry; do
 
   [[ "$recipe" == "null" ]] && continue
 
-  log "[Cook]: $name"
+  log "[Cook   ]: $name"
 
   manager=$(jq -r '.manager' <<<"$recipe")
 
-  log "    pantry: $manager"
+  log "[pantry ]: $manager"
 
   skip_install=false
   load_manager "$manager"
@@ -363,7 +363,7 @@ while read -r entry; do
     done < <(jq -r '.[]' <<<"$validations")
 
     if $validation_passed; then
-      log "    stocked: $name"
+      log "[stocked]: $name"
       record_event "$name" "precheck" "package-skip" "ok" "validation passed" ""
       skip_packages+=("$name")
       skip_install=true
