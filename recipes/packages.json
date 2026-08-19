@@ -375,7 +375,7 @@
         "snap list | grep bruno"
       ]
     },
-    "wsl-ubuntu": {
+    "windows11": {
       "manager": "winget",
       "package": "Bruno.Bruno",
       "validation": [

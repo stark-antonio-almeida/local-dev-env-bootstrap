@@ -38,6 +38,10 @@ if [[ "$OUTPUT_FORMAT" != "human" && "$OUTPUT_FORMAT" != "json" ]]; then
   exit 1
 fi
 
+# Decide is output needs to be captured
+capture_output=false
+[[ "$OUTPUT_FORMAT" == "json" ]] && capture_output=true
+
 log() {
   local line="$1"
   if [[ "$OUTPUT_FORMAT" == "human" ]]; then
@@ -174,6 +178,7 @@ run_install_command() {
   local flags=("$@")
   local output=""
   local status=0
+
   local command_text="install $package_name"
   if ((${#flags[@]} > 0)); then
     command_text="$command_text ${flags[*]}"
@@ -183,22 +188,42 @@ run_install_command() {
 
   if $DRY_RUN; then
     log "      -> skip (dry-run)"
-    record_event "$package_name" "simmer" "install" "dry-run" "$command_text" ""
+
+    if $capture_output; then
+      record_event "$package_name" "simmer" "install" "dry-run" "$command_text" ""
+    fi
+
     return 0
   fi
 
-  if output=$(install "$package_name" "${flags[@]}" 2>&1); then
-    print_output_block "$output"
-    record_event "$package_name" "simmer" "install" "ok" "$command_text" "$output"
-    return 0
+  if $capture_output; then
+    local tmp
+    tmp=$(mktemp)
+
+    if install "$package_name" "${flags[@]}" >"$tmp" 2>&1; then
+      output=$(<"$tmp")
+      rm -f "$tmp"
+
+      record_event "$package_name" "simmer" "install" "ok" "$command_text" "$output"
+      return 0
+    else
+      status=$?
+      output=$(<"$tmp")
+      rm -f "$tmp"
+
+      record_event "$package_name" "simmer" "install" "failed" "$command_text" "$output"
+      log "      -> failed (exit $status)"
+      return "$status"
+    fi
   else
-    status=$?
+    if install "$package_name" "${flags[@]}"; then
+      return 0
+    else
+      status=$?
+      log "      -> failed (exit $status)"
+      return "$status"
+    fi
   fi
-
-  print_output_block "$output"
-  record_event "$package_name" "simmer" "install" "failed" "$command_text" "$output"
-  log "      -> failed (exit $status)"
-  return "$status"
 }
 
 array_to_json() {
