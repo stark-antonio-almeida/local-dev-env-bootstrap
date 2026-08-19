@@ -222,6 +222,9 @@
   "yazi": {
     "wsl-ubuntu": {
       "manager": "custom",
+      "pre": [
+        "source ~/.profile"
+      ]
       "install": [
         "cargo install --force --git https://github.com/sxyazi/yazi.git yazi-build",
         "cargo install --git https://github.com/sxyazi/yazi.git yazi-fm"
