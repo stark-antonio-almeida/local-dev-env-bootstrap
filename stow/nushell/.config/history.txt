@@ -1,0 +1,1561 @@
+ls
+use ~/.config/nushell/kafka
+use ..../.config/nushell/kafka
+help kafka
+kafka setup --cli "C:/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin" tmp.properties
+kafka setup --cli ..../Tools/Kafka/kafka_2.13-4.3.0/bin tmp.properties
+open /root/.config/nushell/kafka/config.json
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+help kafka
+kafka config log
+kafka config log info
+use ..../.config/nushell/kafka
+kafka config log info
+$env.KAFKA_CONFIG
+use ..../.config/nushell/kafka
+kafka config get log-level 
+kafka config log info
+kafka config get log-level 
+use ..../.config/nushell/kafka
+kafka config get log-level 
+kafka config log info
+kafka config get log-level 
+use ..../.config/nushell/kafka
+kafka config get log-level 
+kafka reset offset --dry-run
+kafka config log off
+kafka reset offset --dry-run
+kafka config get log-level 
+kafka config log debug
+kafka config log deasdf
+kafka config log debug
+kafka config get log-level 
+kafka reset offset --dry-run
+kafka config log off
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+kafka config log off
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka config log off
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka config log off
+kafka reset offset --dry-run
+kafka setup --cli C:/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin tmp.properties
+ls C:/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+ls C:/Users/DATAAAL/Tools/Kafka/
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin tmp.properties
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin tmp.properties
+kafka reset offset --dry-run
+kafka config log debug
+kafka reset offset --dry-run
+open tmp.properties
+open ..../Tools/Kafka/configs/
+open ..../Tools/Kafka/configs/ccloud_test.config_supplier_bonus
+open ..../Tools/Kafka/configs/ccloud_test.config_supplier_bonus | save test.config
+ll
+ls
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin test.config
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset test --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset test --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset test --dry-run
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+kafka config get log-level 
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset --dry-run
+kafka config log debug
+kafka reset offset --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+cp test.config local.config
+ll
+cat local.config
+vi local.config
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+help default
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+kafka config log trace
+use ..../.config/nushell/kafka
+kafka config log trace
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+kafka config log off
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+kafka config log trace
+use ..../.config/nushell/kafka
+kafka reset offset sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1 --dry-run
+use ..../.config/nushell/kafka
+kafka fetch topics sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1
+nv local.config
+vi local.config
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin local.config
+kafka fetch topics sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1
+use ..../.config/nushell/kafka
+kafka fetch topics sa-finance-integrations-suppliers-local-01 sdm.group.supplier.v1
+kafka fetch topics sa-finance-integrations-suppliers-local-01
+kafka fetch groups 
+use ..../.config/nushell/kafka
+kafka fetch groups 
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+use ..../.config/nushell/kafka
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+use ..../.config/nushell/kafka
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+use ..../.config/nushell/kafka
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+help split
+help split columns
+help split column
+use ..../.config/nushell/kafka
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+use ..../.config/nushell/kafka
+kafka fetch topics _confluent-controlcenter-7-5-1-1
+let tmp_table = (kafka fetch topics _confluent-controlcenter-7-5-1-1)
+$tmp_table | get topic
+$tmp_table | columns 
+$tmp_table | explore
+use ..../.config/nushell/kafka
+let tmp_table = (kafka fetch topics _confluent-controlcenter-7-5-1-1)
+$tmp_table | explore
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+use ..../.config/nushell/kafka
+kafka wizard reset offset 
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+help kafka
+kafka wizard reset offset --help
+kafka set offset --help
+kafka reset offset --help
+exit
+use ..../.config/nushell/kafka
+kafka set offset --help
+use ..../.config/nushell/kafka
+kafka set offset --help
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+exit
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+kafka config log trace
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+cp local.config default.properties
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+$env.KAFKA_CONFIG
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+$env.KAFKA_CONFIG
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+$env.KAFKA_CONFIG
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+$env.KAFKA_CONFIG
+cat default.properties
+$env.KAFKA_CONFIG | explore 
+exit
+$env.KAFKA_CONFIG | explore 
+$env.KAFKA_CONFIG
+$env.KAFKA_CONFIG?
+use ..../.config/nushell/kafka
+kafka wizard reset offset --dry-run 
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+kafka wizard reset offset --dry-run 
+$env.KAFKA_CONFIG | table
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin -b localhost:9092
+$env.KAFKA_CONFIG | table
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+$env.KAFKA_CONFIG | table
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+kafka wizard reset offset --dry-run 
+kafka config log trace
+kafka wizard reset offset --dry-run 
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --command-config default.properties --group _confluent-controlcenter-7-5-1-1 --reset-offsets --topic _confluent-controlcenter-7-5-1-1-actual-group-consumption-rekey --shift-by 0 --dry-run
+kafka config log info
+kafka wizard reset offset --dry-run 
+help kafka
+kafka wizard --help
+kafka wizard reset offset --help
+exit
+use ..../.config/nushell/kafka
+help kafka
+use ..../.config/nushell/kafka
+help kafka
+use ..../.config/nushell/kafka
+help kafka
+kafka manage topic 
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+kafka manage topic 
+kafka fetch groups 
+..../Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --help
+use ..../.config/nushell/kafka
+kafka fetch topics 
+use ..../.config/nushell/kafka
+kafka fetch topics 
+use ..../.config/nushell/kafka
+kafka fetch topics 
+use ..../.config/nushell/kafka
+kafka fetch topics 
+use ..../.config/nushell/kafka
+kafka describe topic sdm.group.supplier.v1 
+kafka config log trace
+kafka describe topic sdm.group.supplier.v1 
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --help | vim --
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --help | less
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --help
+kafka describe topic sdm.group.supplier.v1 
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+kafka describe topic  __consumer_offsets
+use ..../.config/nushell/kafka
+exit
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+use ..../.config/nushell/kafka
+cd tmp/nushell/kafka/
+use ..../.config/nushell/kafka
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+kafka config log trace
+kafka describe topic  __consumer_offsets
+kafka list topics 
+use ..../.config/nushell/kafka
+kafka list topics 
+use ..../.config/nushell/kafka
+kafka list topics 
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --help
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --command-config default.properties --list --exclude-internal
+bash /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --command-config default.properties --list
+use ..../.config/nushell/kafka
+kafka list topics -s 
+kafka list topics -s strict
+use ..../.config/nushell/kafka
+kafka list topics -s strict
+kafka list topics -s all
+use ..../.config/nushell/kafka
+kafka list topics -s all
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+use ..../.config/nushell/kafka
+kafka list topics -s all
+use ..../.config/nushell/kafka
+help do
+use ..../.config/nushell/kafka
+kafka list topics -s all
+kafka list topics
+kafka list topics -s exclude-internal
+use ..../.config/nushell/kafka
+kafka list topics -s exclude-internal
+use ..../.config/nushell/kafka
+kafka list topics -s exclude-internal
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+help do
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+help complete
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+use ..../.config/nushell/kafka
+help complete
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+/mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --command-config default.properties --topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_ --describe
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+kafka config log trace
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+$env.SHELL
+exit
+use ..../.config/nushell/kafka
+cd tmp/nushell/kafka/
+use ..../.config/nushell/kafka
+kafka config log trace
+kafka setup --cli /mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+/mnt/c/Users/DATAAAL/Tools/Kafka/kafka_2.13-4.3.0/bin/kafka-topics.sh --bootstrap-server localhost:9092 --command-config default.properties --topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_ --describe
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+use ..../.config/nushell/kafka
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_
+kafka describe topic _confluent-controlcenter-7-5-1-1-MonitoringStream-THREE_HOURS-changelog
+help str
+use ..../.config/nushell/kafka
+kafka wizard reset offset
+use ..../.config/nushell/kafka
+kafka wizard reset offset
+use ..../.config/nushell/kafka
+kafka wizard reset offset
+kafka wizard reset offset -e
+exit
+ll
+ls
+nvim
+neovim
+apt install neovim
+cd ~
+ll
+ls
+pwd
+cd ..
+ls
+cd home/
+ls
+../snap/
+ls
+bat README
+open README
+..
+cd home
+nvim
+apt install yazi
+snap install yazi
+apt update
+rustc --version
+cargo
+apt install yazi
+apt install cargo
+rustc --version
+cargo install --force --git https://github.com/sxyazi/yazi.git yazi-build
+cargo install --force yazi-build
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh<\n>rustup update
+cargo binstall yazi-fm
+ls
+mkdir programs
+cd programs/
+git clone https://github.com/sxyazi/yazi.git<\n>cd yazi<\n>cargo build --release --locked
+ls
+nvim Cargo.toml
+cargo build --release --locked
+cd ..
+rm -r yazi/
+curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg<\n>echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list<\n>sudo apt update<\n>sudo apt install yazi
+..
+exit
+yazi
+ln -s . ../../mnt/c/Users/DATAAAL/.config/
+ln -s . ../../mnt/c/Users/DATAAAL/.config
+ls
+ll nushell/
+ls nushell/
+ls **/**
+ls **/*
+rm nushell/kafka/
+rmdir nushell/kafka/
+rm -r nushell/kafka/
+mkdir nushell/scripts
+ln -s nushell/scripts/ ../../mnt/c/Users/DATAAAL/.config
+cd nushell/scripts/
+ll
+ls
+..
+ls
+..
+rm -r nushell/scripts/
+ll
+nvim nushell/config.nu .../mnt/c/Users/DATAAAL/AppData/Roaming/nushell/config.nu
+cp .../mnt/c/Users/DATAAAL/.config/starship.toml .
+la
+ls
+nv nushell/env.nu .../mnt/c/Users/DATAAAL/AppData/Roaming/nushell/env.nu
+nvim nushell/env.nu .../mnt/c/Users/DATAAAL/AppData/Roaming/nushell/env.nu
+apt install starship
+curl -sS https://starship.rs/install.sh | sh
+exit
+ll
+config nu 
+yazi
+exit
+todo
+config nu 
+use ~/.config/nushell/todo.nu 
+todo
+help todo
+todo list
+config env
+ls /mnt/c/Users/DATAAAL/
+ll /mnt/c/Users/DATAAAL/
+ll /mnt/c/Users/DATAAAL/Documents/
+ll /mnt/c/Users/DATAAAL/**/todo*
+ls /mnt/c/Users/DATAAAL/**/todo*
+config env
+exit
+todo list
+help
+help commands
+help commands | where command_type == custom
+yy
+fz
+help commands | where command_type == custom | select name
+mkdir nvim
+yazi
+ls nvim/
+nv
+apt upgrade nvim
+apt update nvim
+snap install nvim
+snap install nvim --classic
+apt remove nvim
+nv --version
+which nvim
+apt list
+apt list | lines | find vim
+apt remove neovim
+nv
+printenv
+nv -U nvim/
+nv -U nvim/init.lua
+nvim
+ls nvim/
+exit
+nv
+nv ~/.config/nvim/init.lua
+ls ~/.config/nvim/init.lua
+ls ~/.config
+ls ~/.config/nvim/
+exit
+nv
+printenv | lines | find nvim
+printenv | lines | find home
+printenv | lines | find home -i
+nv
+mv ~/.config/nvim/ /home/.config/nvim/
+mkdir /home/.config/nvim/
+mv ~/.config/nvim/ /home/.config/nvim/
+ls /home/.config/nvim/
+cd /home/.config/nvim/
+mv nvim/ .
+mv nvim/ . -r
+mv -r nvim/ . 
+yazi
+cd -
+nv
+yazi
+nv
+nv .
+apt install clang libclang-dev build-essential
+nv .
+cargo install tree-sitter-cli
+nv .
+apt install fzf
+apt install lazygit
+lg
+git status
+lg
+git config --global core.autocrlf true
+lg
+git status
+nv .
+apt install unzip
+nv .
+exit
+nv .
+nv
+yazi
+nv .
+nv
+nv .
+nv
+nv .
+nv
+nv .
+which OmniSharp<\n>
+nv .
+nv .
+dotnet --info
+dotnet build
+yazi
+/snap/bin/dotnet --info
+~/.local/share/nvim/mason/bin/OmniSharp --version
+/home/root/.local/share/nvim/mason/bin/OmniSharp --version
+/var/snap/dotnet/common/dotne
+printenv | lines | find dotnet -i
+/snap/bin/dotnet/var/snap/dotnet/common/dotnet/sdk/10.0.109
+/snap/bin/dotnet
+$env.DOTNET_ROOT=/snap/bin/dotnet; /home/root/.local/share/nvim/mason/bin/OmniSharp<\n>
+$env.DOTNET_ROOT = /snap/bin/dotnet ; /home/root/.local/share/nvim/mason/bin/OmniSharp<\n>
+$env.DOTNET_ROOT = ^/snap/bin/dotnet ; /home/root/.local/share/nvim/mason/bin/OmniSharp<\n>
+/home/root/.local/share/nvim/mason/bin/OmniSharp<\n>
+nv .
+exit
+history
+dotnet --version
+dotnet clean -v q; dotnet build -v q; dotnet test 
+clipast
+nv .
+nv .
+nv /home/root/.local/state/nvim/lsp.log
+nv --version
+nu --version
+nv
+dotnet --info
+dotnet restore
+dotnet clean -v q; dotnet build -v q; dotnet test 
+nv /home/root/.local/state/nvim/lsp.log
+echo $DOTNET_ROOT
+exit
+nv .
+ls var
+ls /var
+ls /var/snap/
+ls /var/snap/dotnet/
+ls /var/snap/dotnet/common/
+ls /var/snap/dotnet/common/dotnet/
+ls /var/snap/dotnet/common/dotnet/sdk
+ls /var/snap/dotnet/common/dotnet/sdk/10.0.109/
+exit
+config env
+source
+config env
+exit
+$env."DOTNET_ROOT_X64"
+$env.DOTNET_ROOT_X64
+ps
+htop
+apt install btop
+btop
+lg
+nv .
+nv
+btop
+nv
+pwd
+fz -Project
+fz -P Projects
+help fz
+fz -P Projects
+fz -p Projects/
+$env.HOME
+config env
+fz -p Projects/
+fz
+fz -p Projects int
+tree
+apt install eza
+exit
+fz -p Projects int
+nv .
+config nu
+pwd | clip
+apt install clip
+sudo apt-get install xclip
+pwd | xclip
+pwd | xclip -sel clip
+config nu
+source nu
+source $env.NU_PLUGIN_DIRS
+$env.NU_PLUGIN_DIRS
+$env.NU_VERSION
+$env.NU_LIB_DIRS
+clipast 
+clipast | echo
+"aa" | clip
+apt install xclip
+"aa" | clip
+clipast
+config nu
+fz -p Projects int.fin
+pwd | clip
+/mnt/c/Users/DATAAAL/Projects/integration.finance.sap.facade
+lg
+apt update git
+apt upgrade git
+lg
+fz -p Projects utils
+ll
+help grid
+ll
+fz -p Projects int.utils
+ll
+config nu
+lg
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+git config --global credential.helper "/mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe"
+lg
+git config
+git config --get-all
+git config --global --get-all
+git config --global -l
+git config -e
+git config --global -e
+git config --global -l
+git config -e
+git config --global -e
+nv /root/.gitconfig
+git config --global -e
+nv /root/.gitconfig
+git config --global -e
+lg
+git config --global credential.https://dev.azure.com.useHttpPath true
+git pull
+nv .
+ll
+yy
+nv .
+...
+ll
+cd Tools/tree-sitter-explore/
+ll
+..
+ll
+cd diagrams/
+ll
+..
+ll tmp
+cd semgit
+ll
+explorer .
+open SemGit-Idea.md | clip
+ll
+cd semgit-cli/
+ll
+cargo build
+ll
+mkdir src/language
+cd Tools/semgit/semgit-cli/
+cargo test
+eza -T 
+cargo test
+cargo test -- --no-capture
+cargo build
+cargo test
+cargo test -- --no-capture
+nv .
+fg
+cargo test -- --no-capture
+cargo build
+cargo test -- --no-capture
+yazi
+cargo test -- --no-capture
+cargo run
+cargo test -- --no-capture
+cargo build
+cargo test
+cargo test -- --no-capture
+cargo build
+cargo test
+nv .azurepipelines/
+fz -p Projects finance.finance
+ll
+fz -p Projects int.fin
+nv .
+config nu
+nv ~/.config/starship.toml
+nv
+nv .
+nv /root/.omnisharp/
+nv /home/root/.local/state/nvim/lsp.log
+nv .
+nv /home/root/.local/state/nvim/lsp.log
+dotnet restore
+rg
+which rg
+cargo install rg
+cargo install ripgrep
+which rg
+rg
+rg --help
+rg -R "Visual Studio\\\\Shared\\\\NuGetPackages" .
+rg  "Visual Studio\\\\Shared\\\\NuGetPackages" .
+bash
+ls **/project.assets.json
+nv src/Finance.Models/obj/project.assets.json  
+nv .
+exit
+job unfreeze 
+nv
+nvim
+:q
+exit
+fzf
+rg heimdal
+ll
+la
+ls
+find --help
+ls `Program Files (x86)/**/*eimdal*`
+ls `Program Files (x86)/**/*eimdal*.config`
+yazi
+yy
+cd (fzf --walker=dir)
+ll
+yazi
+:q
+exit
+nv .
+cargo build
+cargo test
+nvim .
+cargo build
+cargo test
+exit
+exit
+nv .
+exit
+nvim .
+eza -T 
+eza --help | less
+ls
+eza -T -I target/
+eza -T -I target/**
+eza -T -I target
+mkdir ../scripts
+ll ..
+ls ..
+ls .semgit/
+cat .semgit/model.json
+cargo run
+cargo run --help
+cargo run -- --help
+cargo run -- help
+cargo run -- graph --help
+cargo run -- graph
+cargo run -- graph | clip
+cargo run -- graph | xclip
+cargo run -- graph -o ../graph.mermaid
+cargo run -- graph --help
+cargo run -- graph --out ../graph.mermaid
+ls target/
+ls target/debug/
+target/debug/semgit-cli --help
+target/debug/semgit-cli graph --format d3 --out ../graph.d3
+ls ..
+nvim ../graph.d3
+nvim src/
+target/debug/semgit-cli --help
+target/debug/semgit-cli flow --help
+target/debug/semgit-cli list
+target/debug/semgit-cli extract ../../../Projects/integration.finance.sap.facade/ --out ../.tmp_cs
+target/debug/semgit-cli extract ../../../Projects/integration.finance.sap.facade/src/ --out ../.tmp_cs
+target/debug/semgit-cli extract --help
+target/debug/semgit-cli extract --path ../../../Projects/integration.finance.sap.facade/src/Common/ --workspace ../.tmp_cs
+cargo run -- --help
+cargo run -- stats
+cargo run -- stats --help
+cargo clean
+..
+ll
+ls
+ls -a
+rm -r .tmp_cs/
+cd semgit-cli/
+ls
+ls ..
+cargo run
+cargo run -- stats
+cargo run -- stats --format json
+cargo build --release --target x86_64-pc-windows-gnu
+rustc --explain E0463
+rustup target add x86_64-pc-windows-gnu
+cargo build --release --target x86_64-pc-windows-gnu
+sudo apt install gcc-mingw-w64-x86-64
+cargo build --release --target x86_64-pc-windows-gnu
+cp target/x86_64-pc-windows-gnu/release/semgit-cli.exe /mnt/c/Users/DATAAAL/O/
+ls /mnt/c/Users/DATAAAL/O/
+mv /mnt/c/Users/DATAAAL/O/semgit-cli.exe /mnt/c/Users/DATAAAL/O/semgit.exe
+exit
+config nu
+exit
+config nu
+exit
+123 | to date 
+123 | to date | describe 
+to date | describe 
+to date 13 | describe 
+config nu
+exit
+config nu
+exit
+config nu
+exit
+to date 13 | describe 
+to date 13
+to date 
+432 | to date 
+cargo install --target x86_64-pc-windows-gnu --path /mnt/c/Users/DATAAAL/O/
+cargo install --help
+cargo build --release --target x86_64-pc-windows-gnu
+mv /mnt/c/Users/DATAAAL/O/semgit.exe /mnt/c/Users/DATAAAL/O/semgit.exe
+mv target/x86_64-pc-windows-gnu/release/semgit.exe /mnt/c/Users/DATAAAL/O/semgit.exe
+nv ../bugs.md
+job unfreeze 
+ls -a
+lg
+nv ../graph.json
+exit
+nv ../index.html
+:q
+yazi
+:q
+bach
+bash
+exit
+ls prod/modules/prod_cluster/modules/schema_registry/schemas/ | sort | uniq | to text | python .azurepipelines\python_magic\schemas_to_tree.py 
+ls prod/modules/prod_cluster/modules/schema_registry/schemas/ | sort | uniq | to text | python .azurepipelines/python_magic/schemas_to_tree.py 
+which python
+which python3
+ls prod/modules/prod_cluster/modules/schema_registry/schemas/ | sort | uniq | to text | python3 .azurepipelines/python_magic/schemas_to_tree.py 
+ls prod/modules/prod_cluster/modules/schema_registry/schemas/ | get name | sort | uniq | to text | python3 .azurepipelines/python_magic/schemas_to_tree.py 
+ls prod/modules/prod_cluster/modules/schema_registry/schemas/ | get name | sort | uniq | to text | python3 .azurepipelines/python_magic/schemas_to_tree.py | save -f tmp/schemas_tree.txt
+nvim tmp/schemas_tree.txt
+yazi
+python3 .azurepipelines/python_magic/bootstrap_changes.py 
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifests lib/manifest.json --package OMS.Internal.Test
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package OMS.Internal.Test
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package OMS.Internal.Test | python3 .azurepipelines/python_magic/schemas_to_tree.py
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package Customer | python3 .azurepipelines/python_magic/schemas_to_tree.py
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package Customer 
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package *
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package "*"
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package "*" | python3 .azurepipelines/python_magic/schemas_to_tree.py
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package "*" 
+open lib/manifest.json
+open lib/manifest.json | each { |k, v| print $k}
+open lib/manifest.json | each { |r| print $r.key}
+open lib/manifest.json | each { |r| print $r.Key}
+open lib/manifest.json | each { |r| print $r}
+open lib/manifest.json | each { |r| print $r | describe }
+open lib/manifest.json | each { |r| print ($r | describe) }
+open lib/manifest.json | each { |r| print ($r | transpose ) }
+open lib/manifest.json | transpose 
+open lib/manifest.json | each { |r| print ($r | get packageId) }
+open lib/manifest.json | each { |r| print ($r.packageId) }
+open lib/manifest.json | enumerate
+open lib/manifest.json | each { enumerate }
+open lib/manifest.json | describe
+open lib/manifest.json | transpose | each
+open lib/manifest.json | transpose | each { print $in }
+open lib/manifest.json | transpose --header-row | each { print $in }
+open lib/manifest.json | transpose --header-row key val| each { print $in }
+open lib/manifest.json | transpose --as-record | each { print $in }
+help transpose
+open lib/manifest.json | transpose key val | each { print $in }
+open lib/manifest.json | transpose key val | each { print $in.key }
+open lib/manifest.json | transpose key val | each { print python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py }
+open lib/manifest.json | transpose key val | each { print (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key ) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | split column  /) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | split column  schemas/) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | split row  schemas/) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | slipt row schemas/ | last) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | split row schemas/ | last) }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | split column  schemas/ | last) }
+help parse
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "schema/(?P<bar>.*?)$") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "\/(?P<bar>.*?)$") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "\/(?P<bar>.*?)") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "(?P<bar>.*?)") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "\/") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | parse "\(/)") }
+open lib/manifest.json | transpose key val | each { print $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key ) }
+open lib/manifest.json | transpose key val | each { print "---------------" " " $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key) }
+open lib/manifest.json | transpose key val | each { print "---------------" " " $in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) }
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) }
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) } | clip
+cp lib/manifest.json lib/manifest.json.back
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) } | clip
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) }
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) } | discard
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) } | ignore 
+open lib/manifest.json | transpose key val | each { print python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py } | ignore 
+open lib/manifest.json | transpose key val | each { python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py } | ignore 
+open lib/manifest.json | transpose key val | each { python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py } 
+open lib/manifest.json | transpose key val | update val { python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py } 
+open lib/manifest.json | transpose key val | update val { [$in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py)] } 
+open lib/manifest.json | transpose key val | each { [$in.key (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py)] } 
+open lib/manifest.json | transpose key val | each { {Key: $in.key, tree: (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py)} } 
+open lib/manifest.json | transpose key val | each { {Key: $in.key, tree: (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json.back --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py)} } 
+open lib/manifest.json.back | transpose key val | each { {Key: $in.key, tree: (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json.back --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py)} } 
+open lib/manifest.json | transpose key val | each { python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py } 
+open lib/manifest.json | transpose key val | each { print " " "---------------" $in.key " " (python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package $in.key | python3 .azurepipelines/python_magic/schemas_to_tree.py) } | ignore 
+sudo apt install libgtk-4-dev liadwaita-1-dev
+sudo apt install libgtk-4-dev libadwaita-1-dev
+sudo snap istall --beta zig --classic
+sudo snap install --beta zig --classic
+ls
+cd tools
+git  clone https://github.com/ghostty-org/ghostty.git
+cd ghostty/
+sudo zig build -p /usr - Doptimize=ReleaseFast
+ls -l
+ls -la
+ghostty
+exit
+ghostty
+sudo zig build -p /usr - Doptimize=ReleaseFast
+cd Tools/ghostty/
+ls /usr
+ls /usr/bin
+ls /usr/bin/gh*
+:q
+sudo zig build -p /usr - Doptimize=ReleaseFast
+ls -la .zig-cache/
+ls -la .zig-cache/**
+sudo zig build --cache-dir /tmp -p /usr - Doptimize=ReleaseFast
+zig build -h
+zig build --help
+zig --help
+ls /tmp
+sudo zig build --cache-dir /tmp/.zig-cache -p /usr - Doptimize=ReleaseFast
+zig build -h
+snap install ghostty --classic<\n>
+..
+rm -r ghostty/
+ghostty
+:q
+:q
+ghostty +edit-config
+ghostty --help
+ghostty +list-themes
+ghostty +edit-config
+:q
+ghostty 
+ghostty +edit-config
+exit
+:q
+nv .
+pwd
+fz
+fz -p Projects Ka
+ll
+ls
+..
+cd finance.sap.facade/
+dotnet restore
+cd Finance.Sap.Facade/
+dotnet restore
+ghostty --help
+ghostty +list-themes
+:q
+ghostty +edit-config
+bash
+exit
+bash
+:q
+lg
+git status
+exit
+fz -p Projects Ka
+lg
+:q
+ghostty +edit-config
+exit
+ghostty +edit-config
+:q
+fz -p Projects Ka
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package "*" 
+python3 .azurepipelines/python_magic/bootstrap_changes.py --manifest lib/manifest.json --package "*" | python3 .azurepipelines/python_magic/schemas_to_tree.py
+exit
+time rg "color" .
+bash
+timeit { nvim --clean +q}
+timeit { git --version }
+nv
+apt-mark showmanual
+cd tmp/
+ll
+..
+ll
+cd packages/
+ll
+apt-mark
+apt-mark showmanual | detect columns 
+apt-mark showmanual | detect columns | rename names | to json | save -g apt-packages.json
+apt-mark showmanual | detect columns | rename names | to json | save apt-packages.json
+nv apt-packages.json
+dpkg -l
+printenv
+snap list
+snap list | detect columns 
+snap list | detect columns | to json | save snap-packages.json
+cargo install --list
+cargo install --list | detect columns 
+cargo install --list | parse "{name} v{version}: {usage}"
+parse -h
+cargo install --list | parse "(?<name>\w+) v(?<version>[0-9.]+): (?<usage>\w+)"
+cargo install --list | parse "(?<name>.+) v(?<version>[0-9.]+): (?<usage>.+)"
+cargo install --list | parse "(?<name>[a-zA-Z\-]+) v(?<version>[0-9.]+): (?<usage>.+)"
+cargo install --list | parse "(?<name>[a-zA-Z-]+) v(?<version>[0-9.]+): (?<usage>.+)"
+cargo install --list 
+cargo install --list | split column " "
+cargo install --list | split column `\s`
+cargo install --list | split column "\s"
+cargo install --list | split column --regex "\s*"
+cargo install --list | split column --regex '\s*'
+cargo install --list | split column --regex '\s+'
+cargo install --list | lines | split column --regex '\s+'
+cargo install --list | lines | split column --regex '(\s+)|(:\s*)'
+cargo install --list 
+cargo install --help
+cargo install --list --message-format json
+cargo install --list | lines | split column --regex '(\s+)|(:\s*)'
+cargo install --list | lines | split column --regex '\s+'
+cargo install --list | lines | split column --regex '\s+' | to json
+cargo install --list | lines | split column --regex '\s+' | rename name version | to json
+cargo install --list | lines | split column --regex '\s+' | rename name version alias | to json
+cargo install --list | lines | split column --regex '\s+' | rename name version alias | to json | save -f wsl-cargo-packages.json
+nv wsl-cargo-packages.json
+ls ~/go/bin
+go env GOPATH
+go
+ls
+ls | name | to md --pretty 
+ls | get name | to md --pretty 
+ls | get name | to md --pretty | clip
+cd .../Tools/
+mkdir machine-bootstrap
+cd machine-bootstrap/
+ll
+mkdir dotfiles
+touch bootstrap.sh bootstrap.ps1 README.md
+ll
+cd dotfiles/
+[windows common wsl] | each { mkdir $in}
+ll
+ssh-keygen -t ed25519 -C "antonio.almeida@stark.kd"
+ls /root/.ssh/
+ssh -T git@devops
+nv /root/.ssh/config
+cd /root/.ssh/
+open -r id_devops_ed25519.pub | clip
+open -r id_devops_ed25519.pub
+ssh-keygen -t rsa -b 3072 -f ~/.ssh/id_devops_ed25519
+mv id_devops_ed25519 id_devops
+mv id_devops_ed25519.pub id_devops.pub
+open -r id_devops.pub | clip
+cd ~/
+ll
+/mnt/c/Users/DATAAAL/Projects/
+ll
+git clone git@devops:v3/STARK-IT/Athene%20Program/integration.finance.sap.facade wls-integraion.finance.sap.facade
+nv /root/.ssh/config
+ssh -T git@devops
+git clone git@devops:v3/STARK-IT/Athene%20Program/integration.finance.sap.facade wls-integraion.finance.sap.facade
+mv wls-integraion.finance.sap.facade/ wsl-integraion.finance.sap.facade/
+cd wsl-integraion.finance.sap.facade/
+lg
+apt upgrade git
+git --version
+apt upgrade lazygit
+lg
+git config --show-origin --get merge.conflictstyle
+apt-cache policy git
+lsb_release -a
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt install git
+lg
+git --version
+lg
+..
+ls | get name
+ls | get name | each { cd $in; git remote -v }
+ls | get name | each { cd $in; git remote -v } | to md
+timeit {ls | get name | each { cd $in; git remote -v }}
+ls | length 
+ls -h
+ls -D
+ls -D .
+ls -D ./**
+ls | where type == dir | get name | each { cd $in; git remote get-url }
+ls | where type == dir | get name | each { cd $in; git remote get-url origin}
+ls | where type == dir | get name
+ls | where type == dir | get name | each { cd $in; git remote get-url origin}
+ls | where type == dir | get name | each { cd $in; print $in; git remote get-url origin}
+rm -r dependency.manager.poc/
+ls | where type == dir | get name | each { cd $in; print $in; git remote get-url origin}
+ls | where type == dir | get name | each { cd $in git remote get-url origin}
+ls | where type == dir | get name | each {<\n>cd $in<\n><\n>let old = (git remote get-url origin)<\n>if (old | str starts-with http) {<\n>let new = (<\n>}
+ls | where type == dir | get name | each { |n|<\n><\n>cd $in<\n><\n>let old = (git remote get-url origin)<\n>if (old | str starts-with http) {<\n>let new = $"git@devops:v3/STARK-IT/Athene%20Program/($n)"<\n>print $new<\n>}<\n>}
+ls | where type == dir | get name | each { |n|<\n><\n>cd $in<\n><\n>let old = (git remote get-url origin)<\n>if ($old | str starts-with http) {<\n>let new = $"git@devops:v3/STARK-IT/Athene%20Program/($n)"<\n>print $new<\n>}<\n>}
+ls | where type == dir | get name | each { |n|<\n><\n>cd $in<\n><\n>let old = (git remote get-url origin)<\n>if ($old | str starts-with http) {<\n>let new = $"git@devops:v3/STARK-IT/Athene%20Program/($n)"<\n>git remote set-url origin $new<\n>}<\n>}
+ls | where type == dir | get name | each { cd $in; print $in; git remote get-url origin}
+ls | where type == dir | get name | each { cd $in; {repo: $in, status: (git status)}}
+ll
+nv .
+:q
+git config --global core.autocrlf false
+git config --global core.eol lf
+git config --show-origin --get core.autocrlf
+git config --show-origin --get core.eol
+ll
+rm -w wsl-integraion.finance.sap.facade/
+rm -r wsl-integraion.finance.sap.facade/
+nv
+nv --version
+dotnet --version
+nv 
+nv
+ls
+cd integration-platform-event-tracking/
+nv .
+nv
+fz -p Projects in
+dotnet clean -v q; dotnet build -v q; dotnet test 
+dotnet restore
+dotnet clean -v q; dotnet build -v q; dotnet test 
+top
+htop
+btop
+nv .
+nv
+nv .
+nv
+nv .
+nv
+nv .
+sudo apt install stow
+stow --version
+wsl -l -v
+^wsl -l -v
+exit
+fz -p Projects int.fin
+nv.
+lg
+dotnet restore
+find --help
+ls **/nuget.config
+ls **/uget.config
+ssh-keygen -t ed25519 -C "antonio.almeida@stark.kd" -f ~/.ssh/id_github
+open -r ~/.ssh/id_github.pub | clip
+git@github.com:stark-antonio-almeida/local-dev-env-bootstrap.git
+git clone git@github.com:stark-antonio-almeida/local-dev-env-bootstrap.git
+nv ~/.ssh/config
+git clone git@github:stark-antonio-almeida/local-dev-env-bootstrap.git
+open -r ~/.ssh/id_github.pub | clip
+git clone git@github:stark-antonio-almeida/local-dev-env-bootstrap.git
+git clone git@github.com:stark-antonio-almeida/local-dev-env-bootstrap.git
+ssh -vT git@github.com
+nv ~/.ssh/config
+ssh -vT git@github
+clipast
+clipast | echo
+nv recepies.json
+ssh -vT git@github
+git clone git@github.com:stark-antonio-almeida/local-dev-env-bootstrap.git
+git clone git@github:stark-antonio-almeida/local-dev-env-bootstrap.git
+cd local-dev-env-bootstrap/
+ll
+starship --version
+bash
+ls
+eza -T -I target
+eza -T -I
+eza -T 
+nv ../recepies.json
+lg
+:q
+bash
+eza -T 
+touch -h
+cd scripts/; touch apt.sh snap.sh cargo.sh custom.sh winget.ps1 choco.ps1
+ll
+nv .
+..
+clipast | echo
+nv new_script.sh
+mv ../recepies.json .
+ll
+mv recepies.json recipes/
+eza -T 
+./new_script.sh choco
+eza -T 
+rm scripts/choco.sh
+cd Tools/local-dev-env-bootstrap/
+./bootstrap.sh --dry-run
+lg
+echo $env.PATH
+echo $env.PATH | find snap
+ls -la /snap/bin
+snap aliases
+lg
+~/.profile
+open ~/.profile
+lg
+git commit -a -m "fix?"
+git push
+export PATH="/snap/bin:$PATH"
+exit
+lg
+./bootstrap.sh --dry-run
+git commit -a -m "Make dry run and non dry run look alike"
+git push
+lg
+./bootstrap.sh --dry-run
+lg
+./bootstrap.sh --dry-run
+lg
+./bootstrap.sh --dry-run
+lg
+bat --version
+bat
+nv .
+lg
+./bootstrap.sh --dry-run
+snap list
+lg
+./bootstrap.sh --dry-run
+lg
+./bootstrap.sh --dry-run
+lg
+eza -T 
+eza -T | clip
+ls ~/.config
+btop --version
+lg
+cp ~/.config/starship.toml stow/starship/
+eza -T | clip
+eza -T 
+mkdir stow/starship/.config
+mv stow/starship/starship.toml stow/starship/.config/
+lg
+eza -T 
+ls **/.config
+mkdir stow/starship/.config
+ls stow/starship/.config
+lg
+git diff HEAD HEAD~1
+git diff HEAD HEAD~1 
+git log 
+git config --global --unset core.pager
+git log 
+git diff HEAD HEAD~1 
+todo list
+lg
+todo list
+nv .
+btop
+dotnet clean -v q; dotnet build -v q; dotnet test 
+echo -e '\a'
+^echo -e '\a'
+^echo -e '\007'
+beep
+^beep
+./bootstrap.sh --dry-run
+./bootstrap.sh
+^beep
+^beep --help
+bash
+nv recipes/packages.json
+beep
+config nu
+source $env.NU_PLUGIN_DIRS
+source $env.HOMEPATH
+echo $env.HOMEPATH
+source ~/.config/nushell/config.nu
+beep
+beep 400
+source ~/.config/nushell/config.nu
+beep-seq [<\n>    { freq: 659 duration: 120 delay: 30 }<\n>    { freq: 659 duration: 120 delay: 180 }<\n>    { freq: 659 duration: 120 delay: 180 }<\n>    { freq: 523 duration: 120 delay: 30 }<\n>    { freq: 659 duration: 120 delay: 180 }<\n>    { freq: 784 duration: 120 delay: 420 }<\n>    { freq: 392 duration: 120 delay: 420 }<\n>]
+beep-seq [<\n>    { freq: 659 duration: 120 delay: 15 }<\n>    { freq: 659 duration: 120 delay: 90 }<\n>    { freq: 659 duration: 120 delay: 90 }<\n>    { freq: 523 duration: 120 delay: 15 }<\n>    { freq: 659 duration: 120 delay: 90 }<\n>    { freq: 784 duration: 120 delay: 210 }<\n>    { freq: 392 duration: 120 delay: 210 }<\n>]
+def failure-beep [] {<\n>2<\n>beep 80 784<\n>3<\n>beep 80 659<\n>4<\n>beep 200 523<\n>5<\n>}
+def failure-beep [] {<\n>beep 80 784<\n>beep 80 659<\n>beep 200 523<\n>}
+beep-seq [<\n>    { freq: 523 duration: 80 delay: 20 }<\n>    { freq: 659 duration: 80 delay: 20 }<\n>    { freq: 784 duration: 80 delay: 20 }<\n>    { freq: 1047 duration: 180 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 523 duration: 120 delay: 20 }<\n>    { freq: 659 duration: 120 delay: 20 }<\n>    { freq: 784 duration: 250 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 880 duration: 80 delay: 10 }<\n>    { freq: 698 duration: 80 delay: 10 }<\n>]
+beep-seq [<\n>    { freq: 392 duration: 120 delay: 20 }<\n>    { freq: 349 duration: 120 delay: 20 }<\n>    { freq: 311 duration: 240 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 523 duration: 100 delay: 20 }<\n>    { freq: 392 duration: 100 delay: 20 }<\n>    { freq: 262 duration: 250 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 440 duration: 120 delay: 20 }<\n>    { freq: 440 duration: 120 delay: 20 }<\n>    { freq: 440 duration: 120 delay: 20 }<\n>    { freq: 349 duration: 80 delay: 20 }<\n>    { freq: 523 duration: 250 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 880 duration: 80 delay: 20 }<\n>    { freq: 440 duration: 160 delay: 0 }<\n>]
+beep-seq [<\n>    { freq: 523 duration: 50 delay: 10 }<\n>    { freq: 659 duration: 50 delay: 10 }<\n>    { freq: 784 duration: 80 delay: 0 }<\n>]
+beep-seq [<\n>{ freq: 523 duration: 120 delay: 20 }<\n>{ freq: 1047 duration: 200 delay: 0 }<\n>]
+beep-seq [<\n>{ freq: 523 duration: 120 delay: 5 }<\n>{ freq: 1047 duration: 200 delay: 0 }<\n>]
+beep-seq [<\n>{ freq: 523 duration: 100 delay: 5 }<\n>{ freq: 1047 duration: 180 delay: 0 }<\n>]
+def zelda-secret [] {<\n>    beep-seq [<\n>        { freq: 392 duration: 80 delay: 20 }<\n>        { freq: 523 duration: 80 delay: 20 }<\n>        { freq: 659 duration: 80 delay: 20 }<\n>        { freq: 784 duration: 180 delay: 0 }<\n>    ]<\n>}
+zelda-secret 
+def pokemon-levelup [] {<\n>    beep-seq [<\n>        { freq: 523 duration: 70 delay: 20 }<\n>        { freq: 659 duration: 70 delay: 20 }<\n>        { freq: 784 duration: 70 delay: 20 }<\n>        { freq: 1047 duration: 180 delay: 0 }<\n>    ]<\n>}
+pokemon-levelup 
+def pokemon-lowhp-once [] {<\n>    beep-seq [<\n>        { freq: 1047 duration: 120 delay: 40 }<\n>        { freq: 784 duration: 120 delay: 0 }<\n>    ]<\n>}
+def pokemon-lowhp-once [] {<\n>    beep-seq [<\n>        { freq: 1047 duration: 120 delay: 40 }<\n>        { freq: 784 duration: 120 delay: 0 }<\n>∙         { freq: 1047 duration: 120 delay: 40 }<\n>∙         { freq: 784 duration: 120 delay: 0 }<\n>∙         { freq: 1047 duration: 120 delay: 40 }<\n>∙         { freq: 784 duration: 120 delay: 0 }<\n>    ]<\n>}
+pokemon-lowhp-once 
+def pokemon-lowhp-once [] {<\n>    beep-seq [<\n>        { freq: 1047 duration: 120 delay: 40 }<\n>        { freq: 784 duration: 120 delay: 0 }<\n>         { freq: 1047 duration: 120 delay: 40 }<\n>         { freq: 784 duration: 120 delay: 0 }<\n>         { freq: 1047 duration: 120 delay: 40 }<\n>         { freq: 784 duration: 120 delay: 0 }<\n>    ]<\n>}
+pokemon-lowhp-once 
+def pokemon-lowhp [] {<\n>    for _ in 0..2 {<\n>        beep-seq [<\n>            { freq: 1047 duration: 120 delay: 40 }<\n>            { freq: 784 duration: 120 delay: 200 }<\n>        ]<\n>    }<\n>}
+pokemon-lowhp 
+ffmep
+ffmpeg
+ffplay
+cd /mnt/c/Users/DATAAAL/Downloads/
+ls *.mp3
+ffplay -nodisp -autoexit -loglevel quiet 12_3.mp3
+ffplay -nodisp -autoexit -loglevel quiet -volume 30 12_3.mp3
+config nu
+nv recipes/packages.json
+./bootstrap.sh
+nv recipes/packages.json
+./bootstrap.sh
+source ~/.config/nushell/config.nu
+sound gameboy-boot
+config nu
+source ~/.config/nushell/config.nu
+alert
+source ~/.config/nushell/config.nu
+dotnet clean
+source ~/.config/nushell/config.nu
+dotnet clean
+dotnet build
+source ~/.config/nushell/config.nu
+dotnet clean
+dotnet build
+source ~/.config/nushell/config.nu
+dotnet build
+help do
+source ~/.config/nushell/config.nu
+dotnet build
+source ~/.config/nushell/config.nu
+dotnet build
+source ~/.config/nushell/config.nu
+dotnet build
+source ~/.config/nushell/config.nu
+dotnet build
+source ~/.config/nushell/config.nu
+def foo [] {<\n>    ^bash -c "exit 1"<\n>    print "after"<\n>}<\n><\n>foo
+def dnbuild [...args] {<\n>    let result = (^dotnet build ...$args | complete)<\n><\n>    if $result.exit_code == 0 {<\n>        sound zelda-item<\n>    } else {<\n>        sound pokemon-low-hp<\n>    }<\n><\n>    print $result.stdout<\n>    print -e $result.stderr<\n>}
+dnbuild
+help do
+def foo [] {<\n>    let out_res = (do -c {^bash -c "exit 1"})<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    let out_res = (do -c {^bash -c "ls && exit 1"})<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    let out_res = (do -c -i {^bash -c "ls && exit 1"})<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    let out_res = (do -i {^bash -c "ls && exit 1"})<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -i {^bash -c "ls && exit 1"}<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -i {^bash -c "ls && exit 1"}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -c {^bash -c "ls && exit 1"}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -c -i {^bash -c "ls && exit 1"}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    (do -c -i {^bash -c "ls && exit 1"})<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -c -i {^bash -c "ls && exit 1" | complete}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    do -c -i {^bash -c "ls && exit 1" | tee {print} | complete}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+help tee
+def foo [] {<\n>    do -c -i {^bash -c "ls && exit 1"  | complete}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    try {^bash -c "ls && exit 1" }<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    try {^bash -c "ls && exit 1" | complete}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [] {<\n>    try {^bash -c "ls && exit 1" } catch { print $env.LAST_EXIT_CODE}<\n>    print $env.LAST_EXIT_CODE<\n>    print "after"<\n>}<\n><\n>foo
+def foo [code] {<\n>     try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE} | print<\n>     print "after"<\n> }<\n><\n> foo
+def foo [code] {<\n>     try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE} | print<\n>     print "after"<\n> }<\n><\n> foo 0
+def foo [code] {<\n>     try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE} | print<\n>     print "after"<\n> }<\n><\n> foo 1
+def foo [code] {<\n>     let tmp = (try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE})<\n>     print "after"<\n> }<\n><\n> foo 1
+def foo [code] {<\n>     let tmp = (try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE})<\n>     print "after" $tmp<\n> }<\n><\n> foo 1
+def foo [code] {<\n>     let tmp = (try {^bash -c $"ls && exit ($code)"; 0 } catch { $env.LAST_EXIT_CODE})<\n>     print "after" $tmp<\n> }<\n><\n> foo 0
+source ~/.config/nushell/config.nu
+dotnet build
+dotnet clean; dotnet build
+nv ~/.config/nushell/dothelp.nu
+source ~/.config/nushell/config.nu
+dotnet clean; dotnet build
+fz -p Projects 
+dotnet clean -v q; dotnet build -v q; dotnet test 
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q; dotnet test 
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q; dotnet test 
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q; dotnet test 
+sound metal-gear-solid-alert
+sound gameboy-boot
+fz -p Projects 
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q; dotnet test 
+ls ~/.nuget/NuGet/NuGet.Config
+nv ~/.nuget/NuGet/NuGet.Config
+dotnet clean -v q; dotnet build -v q; dotnet test 
+nv ~/.nuget/NuGet/NuGet.Config
+dotnet clean -v q; dotnet build -v q; dotnet test 
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q; dotnet test 
+dotnet clean -v q; dotnet build -v q  --property WarningLevel=0; dotnet test 
+:q
+source ~/.config/nushell/config.nu
+dotnet clean -v q; dotnet build -v q  --property WarningLevel=0; dotnet test 
+source ~/.config/nushell/config.nu
+dotnet build -v q  --property WarningLevel=0
+dotnet build -v q  --property WarningLevel=0 | get details
+source ~/.config/nushell/config.nu
+dotnet build -v q  --property WarningLevel=0 
+source ~/.config/nushell/config.nu
+dotnet build -v q  --property WarningLevel=0 
+source ~/.config/nushell/config.nu
+dotnet build -v q  --property WarningLevel=0 
+dotnet build -v q
+dotnet build --no-restore
+nv
+config nu
+ls ~/.nuget/NuGet/NuGet.Config
+open ~/.nuget/NuGet/NuGet.Config
+dotnet restore --project (fzf)
+dotnet restore --help
+dotnet restore (fzf)
+dotnet build (fzf)
+config nu
+source ~/.config/nushell/config.nu
+dotnet test
+:q
+eza -T 
+git pull
+eza --help | less
+eza -T -a
+eza --help | less
+eza -T -a --git-ignore
+mkdir stow/nuget
+cp ~/.nuget/NuGet/NuGet.Config stow/nuget/.nuget/NuGet/
+cp --help
+mkdir stow/nuget/.nuget/NuGet/
+cp ~/.nuget/NuGet/NuGet.Config stow/nuget/.nuget/NuGet/
+eza -T -a --git-ignore
+open stow.sh
+ls ~/.config
+ls ~/.config -s
+ls ~/.config | get name | each { ls $in }
+ls ~/.config | get name | each { ls $in -D }
+ls ~/.config/**
+ls ~/.config/**/*
+ls ~/.config/**
+ls ~/.config/** -s
+[btop ghostty lazygit] | each { ls $"~/.config/($in)"}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)"; ls $"~/.config/($name)" | each { cp $in $"stow/($name)/.config/"}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)"; ls $"~/.config/($name)" | each { cp $in.name $"stow/($name)/.config/"}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls $"~/.config/($name)" | each { cp $in.name $"stow/($name)/.config/"}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls -f $"~/.config/($name)" | each { cp $in.name $"stow/($name)/.config/"}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls -f $"~/.config/($name)" | each { print $in}}
+ls --help
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls $"~/.config/($name)" | where type==file | each { print $in}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls $"~/.config/($name)" | where type == file | each { print $in}}
+[btop ghostty lazygit] | each { |name| mkdir $"stow/($name)/.config"; ls -f $"~/.config/($name)" | where type == file | each { cp $in.name $"stow/($name)/.config/"}}
+eza -T -a --git-ignore
+ls -a ~
+cd local-dev-env-bootstrap/
+ls
+eza -T -a --git-ignore
+lg
+fz -p Tools
+ll
+./bootstrap.sh --dry-run
+./bootstrap.sh --dry-run --platform=sdaf
+./bootstrap.sh --dry-run --platform=windows
+./bootstrap.sh --dry-run --platform=windows11
+nv recipes/packages.json
+nv ~/.nuget/NuGet/NuGet.Config
+nv stow/nuget/.nuget/NuGet/NuGet.Config
+lg
+ls ~/.config/** -s
+ls ~/.config/ -s
