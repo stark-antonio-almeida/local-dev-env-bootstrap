@@ -4,7 +4,22 @@ set -euo pipefail
 
 TARGET="${HOME}"
 DRY_RUN=false
+SEED=false
 
+seed_package() {
+  local package="$1"
+
+  while IFS= read -r source_file; do
+    local relative="${source_file#./$package/}"
+    local target="$TARGET/$relative"
+
+    if [[ -e "$target" && ! -L "$target" ]]; then
+      echo "Seeding: removing $target"
+      rm -f "$target"
+    fi
+
+  done < <(find "./$package" -type f)
+}
 for arg in "$@"; do
   case "$arg" in
   --dry-run)
@@ -12,6 +27,9 @@ for arg in "$@"; do
     ;;
   --target=*)
     TARGET="${arg#*=}"
+    ;;
+  --seed)
+    SEED=true
     ;;
   esac
 done
@@ -37,8 +55,26 @@ failed_packages=()
 
 for package_path in *; do
   [[ -d "$package_path" ]] || continue
+
   package="$package_path"
   echo "Stowing: $package"
+
+  if $SEED; then
+    while IFS= read -r source_file; do
+
+      relative="${source_file#./$package/}"
+      target_file="$TARGET/$relative"
+
+      if [[ -f "$target_file" && ! -L "$target_file" ]]; then
+        echo "  Seed: removing $target_file"
+
+        if ! $DRY_RUN; then
+          rm -f "$target_file"
+        fi
+      fi
+
+    done < <(find "./$package" -type f)
+  fi
 
   if $DRY_RUN; then
     if ! stow --no --restow --target "$TARGET" "$package"; then
