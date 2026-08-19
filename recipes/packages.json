@@ -383,7 +383,13 @@
         "curl -L 'https://www.myinstants.com/media/sounds/tindeck_1.mp3' -o ~/.sounds/metal-gear-solid-alert.mp3"
       ],
       "validation": [
-        "ls ~/.sounds"
+        "test -s ~/.sounds/pokemon-low-hp.mp3",
+        "test -s ~/.sounds/pokemon-level-up.mp3",
+        "test -s ~/.sounds/zelda-item.mp3",
+        "test -s ~/.sounds/gameboy-boot.mp3",
+        "test -s ~/.sounds/super-mario-death.mp3",
+        "test -s ~/.sounds/fatality.mp3",
+        "test -s ~/.sounds/metal-gear-solid-alert.mp3"
       ]
     }
   }
