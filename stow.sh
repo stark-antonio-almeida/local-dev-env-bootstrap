@@ -60,20 +60,22 @@ for package_path in *; do
   echo "Stowing: $package"
 
   if $SEED; then
-    while IFS= read -r source_file; do
-
-      relative="${source_file#./$package/}"
+    while IFS= read -r relative; do
       target_file="$TARGET/$relative"
 
       if [[ -f "$target_file" && ! -L "$target_file" ]]; then
-        echo "  Seed: removing $target_file"
-
+        echo "Source : $package/$relative"
+        echo "Target : $target_file"
         if ! $DRY_RUN; then
+          echo "  Seed: removing $target_file"
           rm -f "$target_file"
         fi
       fi
 
-    done < <(find "./$package" -type f)
+    done < <(
+      cd "$package" &&
+        find . -type f
+    )
   fi
 
   if $DRY_RUN; then
