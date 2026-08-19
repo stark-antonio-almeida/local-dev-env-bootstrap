@@ -1,6 +1,6 @@
 {
   "snap-bootstrap": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "custom",
       "install": [
         "grep -q '/snap/bin' ~/.profile || echo 'export PATH=\"/snap/bin:$PATH\"' >> ~/.profile",
@@ -12,7 +12,7 @@
     }
   },
   "git": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "pre": [
         "sudo add-apt-repository ppa:git-core/ppa -y",
@@ -36,7 +36,7 @@
     }
   },
   "build-essential": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "build-essential",
       "validation": [
@@ -45,7 +45,7 @@
     }
   },
   "clang": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "clang",
       "validation": [
@@ -54,7 +54,7 @@
     }
   },
   "libclang": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "libclang-dev",
       "validation": [
@@ -63,7 +63,7 @@
     }
   },
   "rust": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "custom",
       "pre": [
         "grep -q '.cargo/bin' ~/.profile || echo 'export PATH=\"$HOME/.cargo/bin:$PATH\"' >> ~/.profile"
@@ -82,7 +82,7 @@
     }
   },
   "dotnet": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "pre": [
         "sudo add-apt-repository ppa:dotnet/backports -y",
@@ -102,7 +102,7 @@
     }
   },
   "neovim": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "snap",
       "package": "nvim",
       "flags": [
@@ -114,7 +114,7 @@
     }
   },
   "nushell": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "snap",
       "package": "nushell",
       "flags": [
@@ -133,7 +133,7 @@
     }
   },
   "ghostty": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "snap",
       "package": "ghostty",
       "flags": [
@@ -145,7 +145,7 @@
     }
   },
   "ripgrep": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "cargo",
       "package": "ripgrep",
       "validation": [
@@ -161,7 +161,7 @@
     }
   },
   "tree-sitter-cli": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "cargo",
       "package": "tree-sitter-cli",
       "validation": [
@@ -170,7 +170,7 @@
     }
   },
   "fzf": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "fzf",
       "validation": [
@@ -186,7 +186,7 @@
     }
   },
   "eza": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "eza",
       "validation": [
@@ -202,7 +202,7 @@
     }
   },
   "lazygit": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "custom",
       "install": [
         "LAZYGIT_VERSION=$(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | jq -r .tag_name)",
@@ -223,7 +223,7 @@
     }
   },
   "yazi": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "custom",
       "install": [
         "cargo install --force --git https://github.com/sxyazi/yazi.git yazi-build",
@@ -303,7 +303,7 @@
         "starship --version"
       ]
     },
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "custom",
       "install": [
         "curl -sS https://starship.rs/install.sh | sh -s -- -y"
@@ -350,7 +350,7 @@
     }
   },
   "stow": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "stow",
       "validation": [
@@ -359,11 +359,31 @@
     }
   },
   "btop": {
-    "ubuntu": {
+    "wsl-ubuntu": {
       "manager": "apt",
       "package": "btop",
       "validation": [
         "btop --version"
+      ]
+    }
+  },
+  "sounds": {
+    "wsl-ubuntu": {
+      "manager": "custom",
+      "pre": [
+        "mkdir -p ~/.sounds"
+      ],
+      "install": [
+        "curl -L 'https://www.myinstants.com/media/sounds/low-hp-pokemon.mp3' -o ~/.sounds/pokemon-low-hp.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/12_3.mp3' -o ~/.sounds/pokemon-level-up.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/139-item-catch.mp3' -o ~/.sounds/zelda-item.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/nintendo-game-boy-startup.mp3' -o ~/.sounds/gameboy-boot.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/super-mario-death-sound-sound-effect.mp3' -o ~/.sounds/super-mario-death.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/fatality.swf.mp3' -o ~/.sounds/fatality.mp3",
+        "curl -L 'https://www.myinstants.com/media/sounds/tindeck_1.mp3' -o ~/.sounds/metal-gear-solid-alert.mp3"
+      ],
+      "validation": [
+        "ls ~/.sounds"
       ]
     }
   }
