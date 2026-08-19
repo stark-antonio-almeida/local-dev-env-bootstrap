@@ -98,7 +98,7 @@ run_eval_command() {
   local output=""
   local status=0
 
-  log "    $phase: $command"
+  log "[$phase]: $command"
 
   if $DRY_RUN; then
     log "      -> skip (dry-run)"
@@ -131,14 +131,14 @@ run_validation_command() {
   local status=0
 
   if $DRY_RUN && [[ "$phase" == "taste" ]]; then
-    log "    taste: $command"
+    log "[taste]: $command"
     log "      -> skip (dry-run)"
     record_event "$package" "$phase" "validation" "dry-run" "$command" ""
     return 0
   fi
 
   if ! $DRY_RUN && [[ "$phase" == "taste" ]]; then
-    log "    taste: $command"
+    log "[taste]: $command"
   fi
 
   if $DRY_RUN && [[ "$phase" == "taste" ]]; then
@@ -184,7 +184,7 @@ run_install_command() {
     command_text="$command_text ${flags[*]}"
   fi
 
-  log "    simmer: $command_text"
+  log "[simmer]: $command_text"
 
   if $DRY_RUN; then
     log "      -> skip (dry-run)"
@@ -291,7 +291,7 @@ ensure_command() {
     return
   fi
 
-  log "Kitchen: stocking $package"
+  log "[Kitchen]: stocking $package"
 
   if ! $DRY_RUN; then
     sudo apt update
@@ -335,7 +335,7 @@ while read -r entry; do
 
   [[ "$recipe" == "null" ]] && continue
 
-  log "Cook: [$name]"
+  log "[Cook]: $name"
 
   manager=$(jq -r '.manager' <<<"$recipe")
 
