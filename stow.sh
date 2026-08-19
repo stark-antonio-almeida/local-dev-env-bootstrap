@@ -9,17 +9,25 @@ SEED=false
 seed_package() {
   local package="$1"
 
-  while IFS= read -r source_file; do
-    local relative="${source_file#./$package/}"
-    local target="$TARGET/$relative"
+  stow --no --restow --target "$TARGET" "$package" 2>&1 |
+    awk '
+      /existing target is neither a link nor a directory:/ { getline; print }
+    ' |
+    sed 's/^  *//' |
+    while read -r path; do
 
-    if [[ -e "$target" && ! -L "$target" ]]; then
-      echo "Seeding: removing $target"
-      rm -f "$target"
-    fi
+      local target="$TARGET/$path"
 
-  done < <(find "./$package" -type f)
+      if [[ -f "$target" && ! -L "$target" ]]; then
+        echo "Seeding: $target"
+
+        if ! $DRY_RUN; then
+          rm -f "$target"
+        fi
+      fi
+    done
 }
+
 for arg in "$@"; do
   case "$arg" in
   --dry-run)
@@ -60,22 +68,7 @@ for package_path in *; do
   echo "Stowing: $package"
 
   if $SEED; then
-    while IFS= read -r relative; do
-      target_file="$TARGET/$relative"
-
-      if [[ -f "$target_file" && ! -L "$target_file" ]]; then
-        echo "Source : $package/$relative"
-        echo "Target : $target_file"
-        if ! $DRY_RUN; then
-          echo "  Seed: removing $target_file"
-          rm -f "$target_file"
-        fi
-      fi
-
-    done < <(
-      cd "$package" &&
-        find . -type f
-    )
+    seed_package "$package"
   fi
 
   if $DRY_RUN; then
