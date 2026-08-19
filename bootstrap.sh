@@ -9,9 +9,18 @@ installed_packages=()
 skip_packages=()
 dry_run_packages=()
 
-if [[ "${1:-}" == "--dry-run" ]]; then
-  DRY_RUN=true
-fi
+TARGET_PLATFORM="wsl-ubuntu"
+
+for arg in "$@"; do
+  case "$arg" in
+  --dry-run)
+    DRY_RUN=true
+    ;;
+  --platform=*)
+    TARGET_PLATFORM="${arg#*=}"
+    ;;
+  esac
+done
 
 ensure_command() {
   local command="$1"
@@ -65,7 +74,7 @@ while read -r entry; do
 
   name=$(jq -r '.key' <<<"$entry")
 
-  recipe=$(jq -c '.value.ubuntu' <<<"$entry")
+  recipe=$(jq -c --arg platform "$TARGET_PLATFORM" '.value[$platform]' <<<"$entry")
 
   [[ "$recipe" == "null" ]] && continue
 
