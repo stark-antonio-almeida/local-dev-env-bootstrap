@@ -53,7 +53,6 @@
       ]
     }
   },
-  },
   "clang": {
     "wsl-ubuntu": {
       "manager": "apt",
