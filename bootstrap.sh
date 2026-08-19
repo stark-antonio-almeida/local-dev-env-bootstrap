@@ -102,24 +102,47 @@ run_eval_command() {
 
   if $DRY_RUN; then
     log "      -> skip (dry-run)"
-    record_event "$package" "$phase" "$action" "dry-run" "$command" ""
-    return 0
-  fi
 
-  if output=$(eval "$command" 2>&1); then
-    if [[ "$quiet_success" != "true" ]]; then
-      print_output_block "$output"
+    if $capture_output; then
+      record_event "$package" "$phase" "$action" "dry-run" "$command" ""
     fi
-    record_event "$package" "$phase" "$action" "ok" "$command" "$output"
+
     return 0
-  else
-    status=$?
   fi
 
-  print_output_block "$output"
-  record_event "$package" "$phase" "$action" "failed" "$command" "$output"
-  log "      -> failed (exit $status)"
-  return "$status"
+  if $capture_output; then
+    local tmp
+    tmp=$(mktemp)
+
+    if eval "$command" >"$tmp" 2>&1; then
+      output=$(<"$tmp")
+      rm -f "$tmp"
+
+      if [[ "$quiet_success" != "true" ]]; then
+        print_output_block "$output"
+      fi
+
+      record_event "$package" "$phase" "$action" "ok" "$command" "$output"
+      return 0
+    else
+      status=$?
+      output=$(<"$tmp")
+      rm -f "$tmp"
+
+      print_output_block "$output"
+      record_event "$package" "$phase" "$action" "failed" "$command" "$output"
+      log "      -> failed (exit $status)"
+      return "$status"
+    fi
+  else
+    if eval "$command"; then
+      return 0
+    else
+      status=$?
+      log "      -> failed (exit $status)"
+      return "$status"
+    fi
+  fi
 }
 
 run_validation_command() {
