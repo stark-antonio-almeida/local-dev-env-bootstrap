@@ -44,6 +44,16 @@
       ]
     }
   },
+  "xclip": {
+    "wsl-ubuntu": {
+      "manager": "apt-get",
+      "package": "xclip",
+      "validation": [
+        "clip -h"
+      ]
+    }
+  },
+  },
   "clang": {
     "wsl-ubuntu": {
       "manager": "apt",
@@ -65,10 +75,8 @@
   "rust": {
     "wsl-ubuntu": {
       "manager": "custom",
-      "pre": [
-        "grep -q '.cargo/bin' ~/.profile || echo 'export PATH=\"$HOME/.cargo/bin:$PATH\"' >> ~/.profile"
-      ],
       "install": [
+        "grep -q '.cargo/bin' ~/.profile || echo 'export PATH=\"$HOME/.cargo/bin:$PATH\"' >> ~/.profile",
         "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
       ],
       "post": [
