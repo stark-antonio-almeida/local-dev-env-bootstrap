@@ -27,6 +27,11 @@ Install:
 curl -fsSL https://myhost/debian_install.sh | bash -s -- --platform=wsl-ubuntu
 ```
 
+_example:_
+```bash
+curl -fsSL https://raw.githubusercontent.com/stark-antonio-almeida/local-dev-env-bootstrap/refs/heads/main/debian_install.sh | bash -s -- --platform=wsl-ubuntu
+```
+
 ## Lingo
 
 ```text
