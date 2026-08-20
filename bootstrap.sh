@@ -71,6 +71,24 @@ fi
 capture_output=false
 [[ "$OUTPUT_FORMAT" == "json" ]] && capture_output=true
 
+if [[ "$OUTPUT_FORMAT" == "human" ]]; then
+  echo
+  echo "Configuration"
+  echo "  Platform     : $TARGET_PLATFORM"
+  echo "  Dry Run      : $DRY_RUN"
+  echo "  Output       : $OUTPUT_FORMAT"
+  echo "  Recipe File  : $RECIPE_FILE"
+
+  if [[ -n "$RECIPE_URL" ]]; then
+    echo "  Recipe URL   : $RECIPE_URL"
+  else
+    echo "  Recipe URL   : -"
+  fi
+
+  echo "  Capture      : $capture_output"
+  echo
+fi
+
 log() {
   local line="$1"
   if [[ "$OUTPUT_FORMAT" == "human" ]]; then
