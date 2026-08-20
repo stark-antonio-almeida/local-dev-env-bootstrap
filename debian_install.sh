@@ -98,7 +98,7 @@ if $RUN_BOOTSTRAP; then
   (
     cd "$INSTALL_DIR"
     chmod +x bootstrap.sh
-    bootstrap.sh "${bootstrap_args[@]}"
+    ./bootstrap.sh "${bootstrap_args[@]}"
   )
 fi
 
@@ -115,7 +115,7 @@ if $RUN_STOW; then
   (
     cd "$INSTALL_DIR"
     chmod +x stow.sh
-    stow.sh "${stow_args[@]}"
+    ./stow.sh "${stow_args[@]}"
   )
 fi
 
