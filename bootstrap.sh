@@ -7,7 +7,7 @@ DRY_RUN=false
 OUTPUT_FORMAT="human"
 RECIPE_FILE="recipes/packages.json"
 RECIPE_URL=""
-RECIPE_STDIN=false
+NO_STDIN=false
 installed_packages=()
 skip_packages=()
 dry_run_packages=()
@@ -31,18 +31,15 @@ for arg in "$@"; do
   --recipes-url=*)
     RECIPE_URL="${arg#*=}"
     ;;
+  --no-stdin)
+    NO_STDIN=true
+    ;;
   *)
     echo "❌ Unknown argument: $arg" >&2
     exit 1
     ;;
   esac
 done
-
-# Check if recipe comes from file, web get or stdin
-if [[ -n "$RECIPE_URL" && "$RECIPE_STDIN" == true ]]; then
-  echo "❌ Use either --recipes-url or --recipes-stdin, not both" >&2
-  exit 1
-fi
 
 if [[ -n "$RECIPE_URL" ]]; then
   RECIPE_FILE="$(mktemp)"
@@ -56,7 +53,7 @@ if [[ -n "$RECIPE_URL" ]]; then
     exit 1
   fi
 
-elif [[ ! -t 0 ]]; then
+elif ! $NO_STDIN && [[ ! -t 0 ]]; then
   RECIPE_FILE="$(mktemp)"
   cat >"$RECIPE_FILE"
 fi

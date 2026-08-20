@@ -93,6 +93,8 @@ if $RUN_BOOTSTRAP; then
   echo
   echo "Running bootstrap..."
 
+  bootstrap_args+=("--no-stdin")
+
   chmod +x "$INSTALL_DIR/bootstrap.sh"
   "$INSTALL_DIR/bootstrap.sh" "${bootstrap_args[@]}"
 fi
