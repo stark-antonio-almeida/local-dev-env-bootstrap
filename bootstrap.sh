@@ -6,6 +6,8 @@ trap 'echo "❌ Failed at line $LINENO"' ERR
 DRY_RUN=false
 OUTPUT_FORMAT="human"
 RECIPE_FILE="recipes/packages.json"
+RECIPE_URL=""
+RECIPE_STDIN=false
 installed_packages=()
 skip_packages=()
 dry_run_packages=()
@@ -26,6 +28,9 @@ for arg in "$@"; do
   --output=*)
     OUTPUT_FORMAT="${arg#*=}"
     ;;
+  --recipes-url=*)
+    RECIPE_URL="${arg#*=}"
+    ;;
   *)
     echo "❌ Unknown argument: $arg" >&2
     exit 1
@@ -33,6 +38,30 @@ for arg in "$@"; do
   esac
 done
 
+# Check if recipe comes from file, web get or stdin
+if [[ -n "$RECIPE_URL" && "$RECIPE_STDIN" == true ]]; then
+  echo "❌ Use either --recipes-url or --recipes-stdin, not both" >&2
+  exit 1
+fi
+
+if [[ -n "$RECIPE_URL" ]]; then
+  RECIPE_FILE="$(mktemp)"
+
+  if command -v curl >/dev/null 2>&1; then
+    curl -fsSL "$RECIPE_URL" >"$RECIPE_FILE"
+  elif command -v wget >/dev/null 2>&1; then
+    wget -qO "$RECIPE_FILE" "$RECIPE_URL"
+  else
+    echo "❌ Neither curl nor wget is installed" >&2
+    exit 1
+  fi
+
+elif [[ ! -t 0 ]]; then
+  RECIPE_FILE="$(mktemp)"
+  cat >"$RECIPE_FILE"
+fi
+
+# Configure the output format
 if [[ "$OUTPUT_FORMAT" != "human" && "$OUTPUT_FORMAT" != "json" ]]; then
   echo "❌ Unsupported output format: $OUTPUT_FORMAT (expected: human|json)" >&2
   exit 1

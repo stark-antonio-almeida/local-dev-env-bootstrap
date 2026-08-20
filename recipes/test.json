@@ -1,0 +1,27 @@
+{
+  "ssh-key-github": {
+    "wsl-ubuntu": {
+      "manager": "ssh",
+      "package": "id_github",
+      "flags": [
+        "-t", "ed25519"
+      ],
+      "validation": [
+        "id_github"
+      ]
+    }
+  },
+  "ssh-key-devops": {
+    "wsl-ubuntu": {
+      "manager": "ssh",
+      "package": "id_devops",
+      "flags": [
+        "-t", "rsa",
+        "-b", "3072"
+      ],
+      "validation": [
+        "id_devops"
+      ]
+    }
+  }
+}

@@ -49,7 +49,7 @@
       "manager": "apt-get",
       "package": "xclip",
       "validation": [
-        "clip -h"
+        "xclip -h"
       ]
     }
   },
