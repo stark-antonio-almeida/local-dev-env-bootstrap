@@ -113,6 +113,7 @@ if $RUN_STOW; then
   fi
 
   (
+    source ~/.profile
     cd "$INSTALL_DIR"
     chmod +x stow.sh
     ./stow.sh "${stow_args[@]}"
