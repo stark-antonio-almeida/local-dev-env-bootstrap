@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-REPO_URL="https://github.com/dataaal/local-dev-env-bootstrap.git"
+REPO_URL="https://github.com/stark-antonio-almeida/local-dev-env-bootstrap.git"
 INSTALL_DIR="$HOME/.local-dev-env-bootstrap"
 
 RUN_BOOTSTRAP=true
