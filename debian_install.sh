@@ -95,8 +95,11 @@ if $RUN_BOOTSTRAP; then
 
   bootstrap_args+=("--no-stdin")
 
-  chmod +x "$INSTALL_DIR/bootstrap.sh"
-  "$INSTALL_DIR/bootstrap.sh" "${bootstrap_args[@]}"
+  (
+    cd "$INSTALL_DIR"
+    chmod +x bootstrap.sh
+    bootstrap.sh "${bootstrap_args[@]}"
+  )
 fi
 
 if $RUN_STOW; then
@@ -109,8 +112,11 @@ if $RUN_STOW; then
     stow_args+=(--dry-run)
   fi
 
-  chmod +x "$INSTALL_DIR/stow.sh"
-  "$INSTALL_DIR/stow.sh" "${stow_args[@]}"
+  (
+    cd "$INSTALL_DIR"
+    chmod +x stow.sh
+    stow.sh "${stow_args[@]}"
+  )
 fi
 
 echo
