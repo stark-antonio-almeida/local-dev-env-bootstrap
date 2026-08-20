@@ -24,9 +24,7 @@ _Note: this will clone the project and run but not install the ./bootstrap.sh an
 Install:
 
 ```bash
-curl -fsSL https://myhost/debian_install.sh | \
-bash -s -- \
-  --platform=wsl-ubuntu
+curl -fsSL https://myhost/debian_install.sh | bash -s -- --platform=wsl-ubuntu
 ```
 
 ## Lingo
