@@ -93,6 +93,7 @@ if $RUN_BOOTSTRAP; then
   echo
   echo "Running bootstrap..."
 
+  chmod +x "$INSTALL_DIR/bootstrap.sh"
   "$INSTALL_DIR/bootstrap.sh" "${bootstrap_args[@]}"
 fi
 
@@ -106,6 +107,7 @@ if $RUN_STOW; then
     stow_args+=(--dry-run)
   fi
 
+  chmod +x "$INSTALL_DIR/stow.sh"
   "$INSTALL_DIR/stow.sh" "${stow_args[@]}"
 fi
 
