@@ -427,3 +427,7 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# some files that change and do not need to be Store
+history.txt
+lazy-lock.json
