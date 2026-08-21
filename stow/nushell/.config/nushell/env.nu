@@ -126,11 +126,4 @@ mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
 
 # Custom todo file
-$env.TODO_MAIN_FILE = "/mnt/c/Users/DATAAAL/Tasks/todo.todo"
-
-# for fz
-$env.HOMEPATH = "/mnt/c/Users/DATAAAL/"
-
-#fix dotnet tools 
-$env.DOTNET_ROOT = "/var/snap/dotnet/common/dotnet"
-$env.DOTNET_ROOT_X64 = "/var/snap/dotnet/common/dotnet"
+$env.TODO_MAIN_FILE = "C:\\Users\\DATAAAL\\Tasks\\todo.todo"

@@ -901,35 +901,64 @@ $env.config = {
 # Alias 
 alias nv = nvim
 alias :q = exit
+#alias ll = ls -m -a
 alias lg = lazygit
+#alias cf = cd (fzf --walker-root="C:\\Users\\DATAAAL" --walker=dir --preview="tree /A /F {}")
+alias cf = cd (fzf --walker-root="C:\\Users\\DATAAAL" --walker=dir --preview="eza -T  --icons=always -D -L 3 {}")
+alias file = ^'C:\Program Files\Git\usr\bin\file.exe'
 alias y = ^yazi
+alias gbash = ^'C:\Program Files\Git\git-bash.exe'
 alias docker = ^docker
-alias vimdiff = ^nvim -d
-alias clip = ^xclip -sel clip
-alias clipast = ^xclip -o
+alias vimdiff = ^'nvim -d'
+alias wsl = ^'C:\WINDOWS\system32\wsl.exe' -d Ubuntu -- bash -lc nu
+alias clip = xclip -selection clipboard
+alias clipast = xclip -selection clipboard -o
+
+
+# open a buffer for a temporary buffer off a file type
+def nb [
+  type: string
+  --old (-o)   # list all files with fzf and bat to pick and old file
+  --full (-f)  # Star nvim with plugins, else just start barebones
+] : nothing -> nothing {
+  let full_type_str = if ($type | str starts-with "." ) {
+    $type
+  } else {
+    $".($type)"
+  }
+
+  let files_list = ((ls ...(glob $"~/tmp/nvim_buf/*($full_type_str)")) | where type == file)
+  let list_size = ($files_list | length)
+  let buff_name = if $list_size == 0 {
+    $"~/tmp/nvim_buf/0($full_type_str)"
+  } else {
+    if $old {
+      (^fzf -i --query=$"($full_type_str)" --walker-root="C:\\Users\\DATAAAL\\tmp\\nvim_buf" --preview="bat {}" | str trim -c (char newline))
+    } else {
+      if $list_size >= 100 {
+        ($files_list | sort-by modified | get 0.name)
+      } else {
+        (($files_list | get name | path basename | each { $in | split row "." | get 0 | into int} | sort ) | last 1 | get 0 | $"~/tmp/nvim_buf/($in + 1)($full_type_str)") 
+      }
+    }
+  }
+
+  if $full {
+    nv $buff_name
+  } else {
+    nv --noplugin $buff_name
+  }
+}
  
 # ll as table
 def ll [path?] : nothing -> nothing {
-  ls -a -m ($path | default .) | grid name -i --color | print 
+  ls -a -m ($path | default .) | grid -i --color | print 
 }
 
-# Play a sound from the sound pool
-def --env sound [
-    name: string@"sound_names"
-    --volume (-v): int = 20 # defaults to 20% volume
-] {
-    let file = $"($env.HOME)/.sounds/($name).mp3"
-
-    ^ffplay -nodisp -autoexit -loglevel quiet -volume $volume $file
-}
-
-def "sound_names" [] {
-    ls ~/.sounds
-    | where type == file
-    | get name
-    | path basename
-    | each { |f| $f | str replace '.mp3' '' }
-}
+# do something, ignore errors and beep at the end
+def "beep" [duration?: int, frequency?: int ] : any -> nothing {
+  ^powershell $"[console]::beep\(($frequency | default 500),($duration | default 300))"
+} 
 
 # get replcas from the finance manifest
 def "project posting to file" [] : nothing -> nothing {
@@ -989,10 +1018,7 @@ def prometheus []: any -> list {
 }
 
 # Chane millis int o datetime
-def "to date" [millis?: int]: [
-  nothing -> any
-  int -> any
-] {
+def "to date" [millis?: int]: any -> any {
   match $in {
     null => ($millis * 1_000_000 | into datetime -z 'u'),
     _ => ($in * 1_000_000 | into datetime -z 'u'),
@@ -1021,41 +1047,11 @@ def --env yy [...args] {
 # Fuzzy search and cd into a dir
 def --env fz [query: string = '', --path (-p): string] {
   let base_path = match $path {
-    null => ($env.HOMEPATH),
-    _ => ($env.HOMEPATH + '/' + $path)
+    null => ($env.HOMEDRIVE + $env.HOMEPATH),
+    _ => ($env.HOMEDRIVE + $env.HOMEPATH + '\' + $path)
   }
   # cd (^fzf -i --query=$"($query)" --walker-root=$"($base_path)" --walker=dir --preview="tree /A /F {}" -0 | str trim -c (char newline))
   cd (^fzf -i --query=$"($query)" --walker-root=$"($base_path)" --walker=dir,hidden --preview="eza -T --color=always --icons=auto -L 5 {}" -0 | str trim -c (char newline))
-}
-
-def --wrapped dotnet [...args] {
-
-    let subcommand = ($args | first | default "")
-
-    let rc = (try {
-        ^dotnet ...$args
-        0
-    } catch {
-        $env.LAST_EXIT_CODE
-    })
-
-    if $rc == 0 {
-        match $subcommand {
-            "restore" => { sound mario-finish }
-            "clean"   => { sound gameboy-boot }
-            "build"   => { sound zelda-item }
-            "test"    => { sound pokemon-level-up }
-            _         => { sound zelda-item }
-        }
-    } else {
-        match $subcommand {
-            "build"   => { sound fatality }
-            "test"    => { sound super-mario-death }
-            _         => { sound metal-gear-solid-alert }
-        }
-
-      error make -u $"dotnet ($args | str join ', ')" 
-    }
 }
 
 # Starship config
